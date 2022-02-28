@@ -9,10 +9,10 @@
 </head> 
 <body class="home"> 
  
-<header class="header"> 
+<header class="header" data-scroll-lock-fill-gap> 
 	<div class="header__inner">
 		<a href="./" class="header__logo"></a>
-		<div class="header__menu">
+		<div class="header__menu" data-scroll-lock-scrollable>
 			<nav class="header__navi">
 				<a class="header__navi-link" href="./">Статьи</a>
 				<a class="header__navi-link" href="./">Новости</a>
@@ -27,14 +27,17 @@
 				<input type="submit" value="">
 				<input type="text" placeholder="Поиск по сайту">
 			</form>
+			<button class="header__menu-close"></button>
+			<a class="header__button-mobile button button_top" href="./">Топ товарная ПП</a>
 		</div>
 		<button class="header__search-toggle"></button>
 		<a class="header__top-button button button_top" href="./">Топ товарная ПП</a>
 		<a class="header__gohome" href="./"></a>
+		<button class="header__menu-toggle"></button>
 	</div>
 </header> 
 
-<section class="hero">
+<section class="hero" data-scroll-lock-fill-gap>
 	<div class="hero__inner">
 		<a class="hero__banner" href="./"><img src="./images/stuff/hero-image-1.png" alt="banner"></a>
 	</div>
@@ -103,7 +106,7 @@
 	<div class="container">
 		<div class="footer__inner">
 			<div class="footer__top">
-				<a class="footer__logo" href="./"><img src="./images/logo-footer.png" alt=""></a>
+				<a class="footer__logo" href="./"><img src="./images/logo-light.png" alt=""></a>
 				<nav class="footer__menu">
 					<a class="footer__menu-link" href="./">Статьи</a>
 					<a class="footer__menu-link" href="./">Новости</a>
