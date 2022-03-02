@@ -1357,6 +1357,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var swip
 
 /***/ }),
 
+/***/ "./src/blocks/tab/tab.js":
+/*!*******************************!*\
+  !*** ./src/blocks/tab/tab.js ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("(function () {\n  $('.tab .tab__buttons').on('click', '.tab__button:not(.active)', function (e) {\n    e.preventDefault();\n    var $self = $(this);\n    $self.addClass('active').siblings().removeClass('active');\n    $self.closest('.tab').find('.tab__block').removeClass('active').eq($self.index()).addClass('active');\n  });\n})();//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvYmxvY2tzL3RhYi90YWIuanM/MGJjMCJdLCJuYW1lcyI6WyIkIiwib24iLCJlIiwicHJldmVudERlZmF1bHQiLCIkc2VsZiIsImFkZENsYXNzIiwic2libGluZ3MiLCJyZW1vdmVDbGFzcyIsImNsb3Nlc3QiLCJmaW5kIiwiZXEiLCJpbmRleCJdLCJtYXBwaW5ncyI6IkFBQUEsQ0FBQyxZQUFNO0FBRU5BLEdBQUMsQ0FBQyxvQkFBRCxDQUFELENBQXdCQyxFQUF4QixDQUEyQixPQUEzQixFQUFvQywyQkFBcEMsRUFBaUUsVUFBU0MsQ0FBVCxFQUFZO0FBQzVFQSxLQUFDLENBQUNDLGNBQUY7QUFDQSxRQUFJQyxLQUFLLEdBQUdKLENBQUMsQ0FBQyxJQUFELENBQWI7QUFFQUksU0FBSyxDQUFDQyxRQUFOLENBQWUsUUFBZixFQUF5QkMsUUFBekIsR0FBb0NDLFdBQXBDLENBQWdELFFBQWhEO0FBQ0FILFNBQUssQ0FBQ0ksT0FBTixDQUFjLE1BQWQsRUFBc0JDLElBQXRCLENBQTJCLGFBQTNCLEVBQTBDRixXQUExQyxDQUFzRCxRQUF0RCxFQUFnRUcsRUFBaEUsQ0FBbUVOLEtBQUssQ0FBQ08sS0FBTixFQUFuRSxFQUFrRk4sUUFBbEYsQ0FBMkYsUUFBM0Y7QUFDQSxHQU5EO0FBUUEsQ0FWRCIsImZpbGUiOiIuL3NyYy9ibG9ja3MvdGFiL3RhYi5qcy5qcyIsInNvdXJjZXNDb250ZW50IjpbIigoKSA9PiB7XG5cblx0JCgnLnRhYiAudGFiX19idXR0b25zJykub24oJ2NsaWNrJywgJy50YWJfX2J1dHRvbjpub3QoLmFjdGl2ZSknLCBmdW5jdGlvbihlKSB7XG5cdFx0ZS5wcmV2ZW50RGVmYXVsdCgpO1xuXHRcdGxldCAkc2VsZiA9ICQodGhpcyk7XG5cdFxuXHRcdCRzZWxmLmFkZENsYXNzKCdhY3RpdmUnKS5zaWJsaW5ncygpLnJlbW92ZUNsYXNzKCdhY3RpdmUnKTtcblx0XHQkc2VsZi5jbG9zZXN0KCcudGFiJykuZmluZCgnLnRhYl9fYmxvY2snKS5yZW1vdmVDbGFzcygnYWN0aXZlJykuZXEoJHNlbGYuaW5kZXgoKSkuYWRkQ2xhc3MoJ2FjdGl2ZScpO1xuXHR9KTtcblxufSkoKTtcbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/blocks/tab/tab.js\n");
+
+/***/ }),
+
 /***/ "./src/js/blocks.js":
 /*!**************************!*\
   !*** ./src/js/blocks.js ***!
@@ -1365,7 +1376,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var swip
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _blocks_header_header_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../blocks/header/header.js */ \"./src/blocks/header/header.js\");\n/* harmony import */ var _blocks_h_slider_h_slider_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../blocks/h-slider/h-slider.js */ \"./src/blocks/h-slider/h-slider.js\");\n/* harmony import */ var _blocks_p_slider_p_slider_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../blocks/p-slider/p-slider.js */ \"./src/blocks/p-slider/p-slider.js\");\n\n\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvanMvYmxvY2tzLmpzPzVlM2UiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBIiwiZmlsZSI6Ii4vc3JjL2pzL2Jsb2Nrcy5qcy5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBcIi4uL2Jsb2Nrcy9oZWFkZXIvaGVhZGVyLmpzXCI7XHJcbmltcG9ydCBcIi4uL2Jsb2Nrcy9oLXNsaWRlci9oLXNsaWRlci5qc1wiO1xyXG5pbXBvcnQgXCIuLi9ibG9ja3MvcC1zbGlkZXIvcC1zbGlkZXIuanNcIjsiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/js/blocks.js\n");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _blocks_header_header_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../blocks/header/header.js */ \"./src/blocks/header/header.js\");\n/* harmony import */ var _blocks_h_slider_h_slider_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../blocks/h-slider/h-slider.js */ \"./src/blocks/h-slider/h-slider.js\");\n/* harmony import */ var _blocks_p_slider_p_slider_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../blocks/p-slider/p-slider.js */ \"./src/blocks/p-slider/p-slider.js\");\n/* harmony import */ var _blocks_tab_tab_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../blocks/tab/tab.js */ \"./src/blocks/tab/tab.js\");\n/* harmony import */ var _blocks_tab_tab_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_blocks_tab_tab_js__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvanMvYmxvY2tzLmpzPzVlM2UiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQUNBIiwiZmlsZSI6Ii4vc3JjL2pzL2Jsb2Nrcy5qcy5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBcIi4uL2Jsb2Nrcy9oZWFkZXIvaGVhZGVyLmpzXCI7XHJcbmltcG9ydCBcIi4uL2Jsb2Nrcy9oLXNsaWRlci9oLXNsaWRlci5qc1wiO1xyXG5pbXBvcnQgXCIuLi9ibG9ja3MvcC1zbGlkZXIvcC1zbGlkZXIuanNcIjtcclxuaW1wb3J0IFwiLi4vYmxvY2tzL3RhYi90YWIuanNcIjsiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/js/blocks.js\n");
 
 /***/ }),
 
