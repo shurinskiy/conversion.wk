@@ -722,24 +722,35 @@
 
 <div class="modal__hidden">
 	<div id="comment-form">
-		<form class="form" action="./">
-			<h2 class="form__title">Заголовок и описание формы</h2>
-			<div class="form__field"><input type="text"></div>
-			<div class="form__area"><textarea name="" ></textarea></div>
-			<div class="form__select select">
-				<select name="">
-					<option value="1">По региону</option>
-					<option value="1">По цвету</option>
-					<option value="3">По зодиаку</option>
-				</select>
+		<form class="form form_feedback">
+			<h2 class="form__title">Задайте ваш вопрос</h2>
+			<div class="form__alert"></div>
+			<div class="form__fields">
+				<div class="form__field">
+					<input type="text" name="form_name" placeholder="Ваше имя">
+				</div>
+				<div class="form__field">
+					<input type="text" name="form_email" placeholder="Ваш e-mail">
+				</div>
+				<div class="form__field form__field_region">
+					<input type="text" name="form_region" placeholder="Ваш регион" autocomplete="off">
+				</div>
+				<div class="form__area">
+					<textarea name="form_message" placeholder="Ваше сообщение"></textarea>
+				</div>
+				<label class="form__check">
+					<input type="checkbox" name="form_agree">
+					<span>Я согласен(а) на обработку моих персональных данных</span>
+				</label>
+				<div class="form__field">
+					<button class="form__submit button button_solid button_lil" type="submit">
+						<span>Отправить сообщение</span>
+					</button>
+				</div>
 			</div>
-			<label class="form__check"><input type="checkbox" name="" checked><span>Чекбокс</span></label>
-			<label class="form__check"><input type="checkbox" name=""><span>Чекбокс</span></label>
-			<input class="form__submit button button_solid button_lil" type="submit" value="Оставить комментарий">
 		</form>
 	</div>
 </div>
-
 
 <script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
 <script src="common.js"></script> 
