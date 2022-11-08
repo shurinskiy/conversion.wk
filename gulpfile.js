@@ -137,9 +137,10 @@ function icons() {
 	.pipe($.svgSymbolView({
 		name: 'icons-sprite',
 		monochrome: {
-			blue: '#638bf5',
-			dark: '#46557b',
-			white: '#ffffff'
+			purple: '#D91B5C',
+			grey: '#737373',
+			white: '#ffffff',
+			black: '#000000'
 		}
 	}))
 	.pipe(gulp.dest(pth.pbl.img))
