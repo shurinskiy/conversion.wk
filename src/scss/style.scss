@@ -2,7 +2,7 @@
 @include reset(); 
 
 // Include breakpoints badge
-// body { @include screen-media(); }
+body { @include screen-media(); }
 
 // Import media-query helper
 @import "../../node_modules/include-media/dist/_include-media.scss";
@@ -63,6 +63,15 @@ body, html {
 	display: flex;
 	flex-flow: column nowrap;
 }
+
+body {
+	padding-top: 70px;
+	
+	@include media('<=xs') {
+		padding-top: 60px;
+	}
+}
+
 // .main { flex: 1 0 auto; }
 .footer { 
 	flex: 0 0 auto; 
