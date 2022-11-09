@@ -3,36 +3,52 @@
 	background-color: #201D2E;
 	width: 100%;
 	color: #fff;
+	padding-bottom: 25px;
 	@keyframes menu_fade {
 		from { opacity: 0; }
 		to { opacity: 1; }
 	}
-
-	&__inner {
-		box-sizing: border-box;
-		max-width: 1360px;
-		margin-left: auto;
-		margin-right: auto;
-		padding-left: 20px;
-		padding-right: 20px;
-		width: 100%;
-
-		@include media('<=xxs') {
-			padding-left: 15px;
-			padding-right: 15px;
-		}
+		
+	@include media('<=xs') {
+		padding-bottom: 21px;
 	}
 
 	&__top {
+		box-sizing: border-box;
 		display: flex;
-		height: 70px;
 		align-items: center;
+		height: 70px;
+		width: 100%;
+		max-width: 1360px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0 20px;
+		
+		@include media('<=xs') {
+			height: 65px;
+		}
+		
+		@include media('<=xxs') {
+			padding: 0 15px;
+		}
+	}
+
+	&__bottom {
+		box-sizing: border-box;
+		position: relative;
+		max-width: 1360px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0 20px;
+		width: 100%;
+
+		@include media('<=xxs') {
+			padding: 0 15px;
+		}
 	}
 	
 	&__swiper {
-		margin: -5px -7px 20px;
 		position: relative;
-		padding: 5px 7px;
 	}
 	
 	&__slide {
@@ -49,6 +65,10 @@
 		border-radius: 6px;
 		padding: 10px;
 		transition: transform 0.2s;
+
+		@include media('<=xs') {
+			height: 40px;
+		}
 
 		&:hover {
 			transform: scale(1.08);
@@ -107,18 +127,23 @@
 		box-shadow: inset 9px 5px 15px rgba(0, 0, 0, 0.5);
 		cursor: pointer;
 
+		@include media('<=xs') {
+			height: 50px;
+			width: 50px;
+		}
+
 		&.disabled {
 			display: none;
 		}
 	}
 
 	&__prev {
-		left: 0;
+		left: 5px;
 		background-image: url('#{$images-path}icons-sprite.svg#icon-arr-left-view-grey');
 	}
 	
 	&__next {
-		right: 0;
+		right: 5px;
 		background-image: url('#{$images-path}icons-sprite.svg#icon-arr-right-view-grey');
 	}
 }

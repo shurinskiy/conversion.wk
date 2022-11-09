@@ -28,10 +28,10 @@ import Swiper, { Navigation, Mousewheel } from 'swiper';
 				slidesPerView: 4,
 			},
 			480: { 
-				slidesPerView: 3,
+				slidesPerView: 3.7,
 			},
 			0: { 
-				slidesPerView: 2,
+				slidesPerView: 2.5,
 			}
 		}
 	});
