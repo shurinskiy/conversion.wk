@@ -1,0 +1,9 @@
+.footer {
+	$self: &;
+	background-color: #201D2E;
+	border-radius: 40px 40px 0 0;
+
+	&__inner {
+		min-height: 250px;
+	}
+}
