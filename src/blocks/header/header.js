@@ -1,14 +1,11 @@
-import Swiper, { Navigation } from 'swiper';
+import Swiper, { Navigation, Mousewheel } from 'swiper';
 
 (() => {
 
-	$('.header__search-toggle').on('click', function(e) {
-		$('.header__menu').add(this).toggleClass('switched');
-	})
-
 	new Swiper(".header__swiper", {
 		spaceBetween: 20,
-		modules: [Navigation],
+		modules: [Navigation, Mousewheel],
+		mousewheel: true,
 		navigation: {
 			prevEl: '.header__prev',
 			nextEl: '.header__next',
