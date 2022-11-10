@@ -1,0 +1,21 @@
+.more {
+	$self: &;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	font-family: "MSB", sans-serif;
+	text-decoration: none;
+	color: #D91B5C;
+	font-size: 18px;
+	max-width: 280px;
+	white-space: nowrap;
+
+	&::after {
+		display: block;
+		content: '';
+		width: 77px;
+		height: 16px;
+		background: url('#{$images-path}icons-sprite.svg#icon-arrow-view-purple') center right / 180px 14px no-repeat transparent;
+		margin-left: 15px;
+	}
+}

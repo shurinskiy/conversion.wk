@@ -1,66 +1,202 @@
 @@include("_head.html") 
 @@include("_header.html") 
 
-<section class="popular">
-	<div class="popular__inner container">
-		<h1 class="popular__title title">Популярные материалы</h1>
-		<div class="popular__items">
-			<div class="popular__item hp-card">
+<section class="h-popular">
+	<div class="h-popular__container container">
+		<h1 class="h-popular__title title">Популярные материалы</h1>
+		<div class="h-popular__items">
+			<div class="h-popular__item hp-card">
 				<img class="hp-card__image" src="https://source.unsplash.com/random/600x600?coin" alt="">
 				<a class="hp-card__hashtag" href="./">#втренде</a>
 				<div class="hp-card__bottom">
 					<div class="hp-card__date">January 20, 2018</div>
-					<div class="hp-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, nesciunt.</div>
+					<a class="hp-card__text" href="./">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, nesciunt.</a>
 				</div>
 			</div>
-			<div class="popular__item hp-card">
+			<div class="h-popular__item hp-card hp-card_large">
 				<img class="hp-card__image" src="https://source.unsplash.com/random/600x600?trade" alt="">
 				<a class="hp-card__hashtag" href="./">#втренде</a>
 				<div class="hp-card__bottom">
 					<div class="hp-card__date">January 20, 2018</div>
-					<div class="hp-card__text">Sapiente sed nostrum quidem, pariatur nulla fuga ad dolorum esse.</div>
+					<a class="hp-card__text" href="./">Sapiente sed nostrum quidem, pariatur nulla fuga ad dolorum esse.</a>
 				</div>
 			</div>
-			<div class="popular__item hp-card">
+			<div class="h-popular__item hp-card">
 				<img class="hp-card__image" src="https://source.unsplash.com/random/600x601?coin" alt="">
 				<a class="hp-card__hashtag" href="./">#втренде</a>
 				<div class="hp-card__bottom">
 					<div class="hp-card__date">January 20, 2018</div>
-					<div class="hp-card__text">Voluptas provident sint, aliquid a incidunt, culpa placeat nemo vero.</div>
+					<a class="hp-card__text" href="./">Voluptas provident sint, aliquid a incidunt, culpa placeat nemo vero.</a>
 				</div>
 			</div>
-			<div class="popular__item hp-card">
+			<div class="h-popular__item hp-card">
 				<img class="hp-card__image" src="https://source.unsplash.com/random/601x600?coin" alt="">
 				<a class="hp-card__hashtag" href="./">#втренде</a>
 				<div class="hp-card__bottom">
 					<div class="hp-card__date">January 20, 2018</div>
-					<div class="hp-card__text">Suscipit eligendi expedita non distinctio aperiam doloremque dolores.</div>
+					<a class="hp-card__text" href="./">Suscipit eligendi expedita non distinctio aperiam doloremque dolores.</a>
 				</div>
 			</div>
-			<div class="popular__item hp-card">
+			<div class="h-popular__item hp-card">
 				<img class="hp-card__image" src="https://source.unsplash.com/random/600x601?trade" alt="">
 				<a class="hp-card__hashtag" href="./">#втренде</a>
 				<div class="hp-card__bottom">
 					<div class="hp-card__date">January 20, 2018</div>
-					<div class="hp-card__text">Minus illum iste ipsum error saepe temporibus repudiandae iure.</div>
+					<a class="hp-card__text" href="./">Minus illum iste ipsum error saepe temporibus repudiandae iure.</a>
 				</div>
 			</div>
 		</div>
-		<a class="popular__banner banner" href="./">
+		<a class="h-popular__banner banner" href="./">
 			<img src="./images/banner-image-1.png" alt="">
 		</a>
 	</div>
 </section>
 
 <section class="h-articles">
-	<div class="h-articles__inner container">
+	<div class="h-articles__container container">
 		<h2 class="h-articles__title title">Свежие статьи</h2>
 		<div class="h-articles__items">
-			<div class="h-articles__item a-card">
-				<div class="a-card__image"><img src="" alt=""></div>
-				
+			@@include("_card-a.html", {
+				"cls":"h-articles__item",
+				"img":"card-a-image-1.png"
+			})
+
+			@@include("_card-a.html", {
+				"cls":"h-articles__item",
+				"img":"card-a-image-2.png"
+			})
+
+			@@include("_card-a.html", {
+				"cls":"h-articles__item",
+				"img":"card-a-image-3.png"
+			})
+
+			@@include("_card-a.html", {
+				"cls":"h-articles__item",
+				"img":"card-a-image-4.png"
+			})
+
+			@@include("_card-a.html", {
+				"cls":"h-articles__item",
+				"img":"card-a-image-5.png"
+			})
+
+			@@include("_card-a.html", {
+				"cls":"h-articles__item",
+				"img":"card-a-image-6.png"
+			})
+
+			@@include("_card-a.html", {
+				"cls":"h-articles__item",
+				"img":"card-a-image-1.png"
+			})
+
+			@@include("_card-a.html", {
+				"cls":"h-articles__item",
+				"img":"card-a-image-2.png"
+			})
+		</div>
+		<a class="h-articles__more more" href="./">Все статьи</a>
+	</div>
+</section>
+
+<section class="h-news">
+	<div class="h-news__container container">
+		<h2 class="h-news__title title">Последние новости</h2>
+		<div class="h-news__inner">
+			<div class="h-news__items">
+				<div class="h-news__item">
+					<div class="h-news__item-date">03.10</div>
+					<div class="h-news__side">
+						<h3 class="h-news__item-title">Основные ошибки при создании прелендинга и как их исправить</h3>
+						<div class="h-news__item-text">Основные ошибки при создании прелендинга и как их исправить #2</div>
+					</div>
+				</div>
+				<div class="h-news__item">
+					<div class="h-news__item-date">03.10</div>
+					<div class="h-news__side">
+						<h3 class="h-news__item-title">Основные ошибки при создании прелендинга и как их исправить</h3>
+						<div class="h-news__item-text">Основные ошибки при создании прелендинга и как их исправить #2</div>
+					</div>
+				</div>
+				<div class="h-news__item">
+					<div class="h-news__item-date">03.10</div>
+					<div class="h-news__side">
+						<h3 class="h-news__item-title">Основные ошибки при создании прелендинга и как их исправить</h3>
+						<div class="h-news__item-text">Основные ошибки при создании прелендинга и как их исправить #2</div>
+					</div>
+				</div>
+				<div class="h-news__item">
+					<div class="h-news__item-date">03.10</div>
+					<div class="h-news__side">
+						<h3 class="h-news__item-title">Основные ошибки при создании прелендинга и как их исправить</h3>
+						<div class="h-news__item-text">Основные ошибки при создании прелендинга и как их исправить #2</div>
+					</div>
+				</div>
+			</div>
+			<a class="h-news__banner" href="./">
+				<img src="./images/banner-image-2.png" alt="">
+			</a>
+		</div>
+		<a class="h-news__more more" href="./">Все новости</a>
+	</div>
+</section>
+
+<section class="h-blogs">
+	<div class="h-blogs__container container">
+		<h2 class="h-blogs__title title">Авторские блоги</h2>
+		<div class="h-blogs__inner">
+			<div class="h-blogs__items">
+				@@include("_card-b.html", {
+					"cls":"h-blogs__item",
+					"img":"card-b-image.png"
+				})
+	
+				@@include("_card-b.html", {
+					"cls":"h-blogs__item",
+					"img":"card-b-image.png"
+				})
+	
+				@@include("_card-b.html", {
+					"cls":"h-blogs__item",
+					"img":"card-b-image.png"
+				})
+			</div>
+			<div class="h-blogs__banner">
+				<img src="./images/banner-image-3.png" alt="">
 			</div>
 		</div>
+		<a class="h-blogs__more button" href="./">Все блоги</a>
+	</div>
+</section>
+
+<section class="h-program">
+	<div class="h-program__container container">
+		<h2 class="h-program__title title">Рейтинг партнерок</h2>
+		<div class="h-program__special p-special">
+			<div class="p-special__brand"><img src="./images/brand-2.png" alt=""></div>
+			<div class="p-special__name">1 Wieners</div>
+			<div class="p-special__text">Индивидуальные CPA-ставки для всех веб-мастеров. От 50% прибыли от игрока пожизненно по RevShare. До 200$ за игрока, привлеченного по CPA. Готовые промо-материалы.</div>
+			<div class="p-special__badge">AFFY рекомендует!</div>
+		</div>
+		<div class="h-program__caps">
+			<div class="h-program__cap">Партнерка</div>
+			<div class="h-program__cap">Направления</div>
+		</div>
+		<div class="h-program__items">
+			<div class="h-program__item card-p">
+				<a class="card-p__brand" href="./"><img src="./images/brand-1.png" alt=""></a>
+				<div class="card-p__inner">
+					<h3 class="card-p__title"></h3>
+					<div class="card-p__text"></div>
+					<div class="card-p__tags">
+						<a class="card-p__tag" href="./">#геблинг</a>
+					</div>
+					<a class="card-p__more" href="./"></a>
+				</div>
+			</div>
+		</div>
+		<a class="h-program__more more" href="./">Все партнерки</a>
 	</div>
 </section>
 
