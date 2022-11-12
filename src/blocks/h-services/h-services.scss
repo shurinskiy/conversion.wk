@@ -1,0 +1,25 @@
+.h-services {
+	$self: &;
+	padding: 50px 0;
+	background-color: #ECEFF6;
+
+	&__container {
+
+	}
+
+	&__title {
+
+	}
+
+	&__items {
+		margin-bottom: 50px;
+	}
+
+	&__item {
+		margin-bottom: 20px;
+	}
+
+	&__more {
+		margin-left: auto;
+	}
+}

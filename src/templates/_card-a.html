@@ -1,13 +1,17 @@
 <div class="card-a @@if(this.cls){@@cls}">
-	@@if(this.img){<a class="card-a__image" href="./"><img src="@@if(this.img){./images/@@img}" alt=""></a>}
+	@@if(this.img){<a class="card-a__image" href="./">
+		<img src="@@if(this.img){./images/@@img}" alt="">
+		<span class="card-a__date">05 сентября 2022</span>
+	</a>}
 	<div class="card-a__side">
-		<div class="card-a__date">05 сентября 2022</div>
+		@@if(this.blog) {<h3 class="card-a__title">Myria – обзор экосистемы для p2e проектов</h3>}
+		@@if(this.blog) {<div class="card-a__text">Обзор экосистемы для p2e проектов. Myria – обзор экосистемы для p2e проектов.Myria – обзор экосистемы для p2e проектов</div>}
 		<div class="card-a__tags">
-			<a class="card-a__tag card-a__tag_case" href="./">#кейсы</a>
-			<a class="card-a__tag card-a__tag_news" href="./">#новости</a>
-			<a class="card-a__tag card-a__tag_trend" href="./">#в тренде</a>
+			<a class="card-a__tag tag tag_viol" href="./">#кейсы</a>
+			<a class="card-a__tag tag tag_purp" href="./">#новости</a>
+			<a class="card-a__tag tag tag_lil" href="./">#в тренде</a>
 		</div>
-		<div class="card-a__text">Veritatis nesciunt itaque velit. At eos sequi ab, molestiae sapiente ad eveniet...</div>
+		@@if(!this.blog) {<div class="card-a__title">Veritatis nesciunt itaque velit. At eos sequi ab, molestiae sapiente ad eveniet...</div>}
 		<div class="card-a__bottom">
 			<div class="card-a__views">273</div>
 			<a class="card-a__own" href="./">Блог Gambling Pro</a>

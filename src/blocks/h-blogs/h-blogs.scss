@@ -1,7 +1,7 @@
 .h-blogs {
 	$self: &;
 	background-color: #ECEFF6;
-	padding: 40px 0;
+	padding: 50px 0;
 
 	&__container {
 
@@ -17,11 +17,7 @@
 	}
 
 	&__items {
-		flex-grow: 1;
 		margin-right: 20px;
-		display: flex;
-		flex-flow: column nowrap;
-		justify-content: space-between;
 	}
 
 	&__item {
@@ -31,11 +27,16 @@
 		}
 	}
 
-	&__banner {
+	&__side {
 		display: flex;
+		flex-flow: column nowrap;
+	}
+
+	&__banner {
 		border-radius: 7px;
 		overflow: hidden;
-		min-width: 370px;
+		min-width: 240px;
+		align-self: flex-start;
 
 		img {
 			display: block;
@@ -46,6 +47,6 @@
 	}
 
 	&__more {
-		margin-left: auto;
+		margin-top: auto;
 	}
 }

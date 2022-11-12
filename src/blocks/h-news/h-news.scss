@@ -1,6 +1,6 @@
 .h-news {
 	$self: &;
-	padding: 40px 0;
+	padding: 50px 0;
 
 	&__container {
 
@@ -12,22 +12,22 @@
 
 	&__inner {
 		display: flex;
-		align-items: center;
+		align-items: flex-end;
 		background-color: #fff;
 		border-radius: 7px;
 		overflow: hidden;
-		margin-bottom: 40px;
+		margin: -50px 0 50px;
 	}
 
 	&__items {
 		flex-grow: 1;
-		margin: 0 20px 0 30px;
+		margin: 0 20px 0 0;
 	}
 
 	&__item {
 		display: flex;
 		align-items: center;
-		padding: 25px 0;
+		padding: 40px 0;
 
 		&:not(:last-child) {
 			border-bottom: 1px solid #D91B5C;
@@ -56,7 +56,7 @@
 		border-radius: 7px;
 		overflow: hidden;
 		align-self: stretch;
-		min-width: 270px;
+		min-width: 240px;
 
 		img {
 			display: block;

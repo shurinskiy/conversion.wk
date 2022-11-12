@@ -3,13 +3,37 @@
 	background-color: #fff;
 	border-radius: 10px;
 	overflow: hidden;
-	position: relative;
 	min-height: 320px;
 	display: flex;
 	flex-flow: column nowrap;
+	
+	&_blog {
+		flex-flow: row nowrap;
+		min-height: auto;
+		
+		#{$self}__image {
+			height: auto;
+			min-width: 270px;
+			height: 155px;
+		}
+		
+		#{$self}__date {
+			top: auto;
+			bottom: 10px;
+		}
+
+		#{$self}__side {
+			padding: 15px;
+		}
+
+		#{$self}__title {
+			font-size: 16px;
+		}
+	}
 
 	&__image {
 		display: block;
+		position: relative;
 		overflow: hidden;
 		border-radius: 10px;
 		height: 140px;
@@ -47,29 +71,17 @@
 	}
 
 	&__tag {
-		background-color: #ECEFF6;
-		text-decoration: none;
-		border-radius: 100px;
-		padding: 4px 6px;
-		font-size: 9px;
 		margin: 0 10px 10px 0;
-
-		&_case {
-			color: #4D1495;
-		}
-
-		&_news {
-			color: #D91B5C;
-		}
-
-		&_trend {
-			color: #5E5BFF;
-		}
 	}
 
-	&__text {
+	&__title {
 		font-family: "MB", sans-serif;
 		font-size: 14px;
+		color: #474747;
+		margin-bottom: 5px;
+	}
+	
+	&__text {
 		color: #474747;
 		margin-bottom: 10px;
 	}

@@ -1,0 +1,35 @@
+.p-special {
+	$self: &;
+	border: 1px solid #D91B5C;
+	background-color: #fff;
+	padding: 30px 30px 30px 40px;
+	display: flex;
+	align-items: center;
+	position: relative;
+
+	&__brand {
+		width: 120px;
+		flex-shrink: 0;
+		margin-right: 30px;
+	}
+
+	&__name {
+		white-space: nowrap;
+		font-family: "MEB", sans-serif;
+		margin-right: 30px;
+	}
+
+	&__text {
+
+	}
+
+	&__badge {
+		position: absolute;
+		left: -25px;
+		bottom: calc(100% - 8px);
+		background-color: #E31E62;
+		color: #fff;
+		padding: 4px 28px;
+		font-size: 14px;
+	}
+}

@@ -1,0 +1,97 @@
+.card-e {
+	$self: &;
+	border: 1px solid #D91B5C;
+	border-radius: 10px;
+	overflow: hidden;
+	background: linear-gradient(90deg, rgba(255,255,255,1) 30%, rgba(255,255,255,0.5) 100%),  url('#{$images-path}events-image-1.png') center / cover no-repeat;
+	padding: 35px 18px 25px;
+
+	&__title {
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+
+		img {
+			margin-right: 10px;
+		}
+		
+		span {
+			font-family: "MB", sans-serif;
+			font-size: 27px;
+		}
+	}
+
+	&__points {
+		margin-bottom: 15px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 20px;
+		align-items: center;
+	}
+
+	&__point {
+		grid-column: span 1;
+		font-size: 14px;
+		color: #777;
+		position: relative;
+		padding-left: 35px;
+
+		&::before {
+			display: block;
+			content: '';
+			height: 25px;
+			width: 25px;
+			background-color: #D91B5C;
+			background-repeat: no-repeat;
+			background-position: center;
+			border-radius: 50%;
+			position: absolute;
+			transform: translateY(-50%);
+			top: 50%;
+			left: 0;
+		}
+
+		&_date::before {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-calendar-view-white');
+			background-size: 11px 13px;
+		}
+
+		&_geo::before {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-geo-view-white');
+			background-size: 11px 15px;
+		}
+		
+		&_price::before {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-card-view-white');
+			background-size: 11px 11px;
+		}
+	}
+
+	&__text {
+		max-width: 400px;
+		margin-bottom: 35px;
+		line-height: 1.2;
+	}
+
+	&__more {
+		box-sizing: border-box;
+		font-family: "MSB", sans-serif;
+		text-decoration: none;
+		font-size: 14px;
+		color: #000;
+		display: flex;
+		align-items: center;
+		flex-shrink: 0;
+		padding: 0;
+		white-space: nowrap;
+		
+		&::after {
+			display: block;
+			content: '';
+			height: 16px;
+			width: 22px;
+			background: url('#{$images-path}icons-sprite.svg#icon-arrow-view-black') center right / 180px 14px no-repeat transparent;
+			margin-left: 8px;
+		}
+	}
+}
