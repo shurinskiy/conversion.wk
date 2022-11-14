@@ -1,0 +1,27 @@
+.m-promocode {
+	$self: &;
+
+	&__hero {
+		padding: 5px;
+		text-align: center;
+		background-color: #D91B5C;
+		font-family: "MEB", sans-serif;
+		font-size: 32px;
+		color: #fff;
+		margin-bottom: 60px;
+	}
+	
+	&__text {
+		color: #D91B5C;
+		text-align: center;
+		font-family: "MM", sans-serif;
+		font-size: 24px;
+		max-width: 350px;
+		margin: 0 auto 55px;
+	}
+
+	&__link {
+		max-width: 290px;
+		margin: 0 auto;
+	}
+}

@@ -895,14 +895,19 @@ export const makeModalFrame = function(options = {}, cb) {
 				return cb.call(body, el);
 		}
 
-		document.addEventListener('click', (e) => {
-			let el = e.target.closest(select);
+		if(this) {
+			open(this);
 
-			if (el && el.dataset[`${cls}`]) {
-				e.preventDefault();
-				open(el);
-			}
-		});
+		} else {
+			document.addEventListener('click', (e) => {
+				let el = e.target.closest(select);
+	
+				if (el && el.dataset[`${cls}`]) {
+					e.preventDefault();
+					open(el);
+				}
+			});
+		}
 
 		document.addEventListener('click', (e) => {
 			if (e.target == modal || e.target.classList.contains(`${cls}__close`)) {
