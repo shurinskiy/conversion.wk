@@ -5,44 +5,44 @@
 	<div class="h-popular__container container">
 		<h1 class="h-popular__title title">Популярные материалы</h1>
 		<div class="h-popular__items">
-			<div class="h-popular__item hp-card">
-				<img class="hp-card__image" src="https://source.unsplash.com/random/600x600?coin" alt="">
-				<a class="hp-card__hashtag" href="./">#втренде</a>
-				<div class="hp-card__bottom">
-					<div class="hp-card__date">January 20, 2018</div>
-					<a class="hp-card__text" href="./">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, nesciunt.</a>
+			<div class="h-popular__item card-hp">
+				<img class="card-hp__image" src="https://source.unsplash.com/random/600x600?coin" alt="">
+				<a class="card-hp__hashtag" href="./">#втренде</a>
+				<div class="card-hp__bottom">
+					<div class="card-hp__date">January 20, 2018</div>
+					<a class="card-hp__text" href="./">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, nesciunt.</a>
 				</div>
 			</div>
-			<div class="h-popular__item hp-card hp-card_large">
-				<img class="hp-card__image" src="https://source.unsplash.com/random/600x600?trade" alt="">
-				<a class="hp-card__hashtag" href="./">#втренде</a>
-				<div class="hp-card__bottom">
-					<div class="hp-card__date">January 20, 2018</div>
-					<a class="hp-card__text" href="./">Sapiente sed nostrum quidem, pariatur nulla fuga ad dolorum esse.</a>
+			<div class="h-popular__item card-hp card-hp_large">
+				<img class="card-hp__image" src="https://source.unsplash.com/random/600x600?trade" alt="">
+				<a class="card-hp__hashtag" href="./">#втренде</a>
+				<div class="card-hp__bottom">
+					<div class="card-hp__date">January 20, 2018</div>
+					<a class="card-hp__text" href="./">Sapiente sed nostrum quidem, pariatur nulla fuga ad dolorum esse.</a>
 				</div>
 			</div>
-			<div class="h-popular__item hp-card">
-				<img class="hp-card__image" src="https://source.unsplash.com/random/600x601?coin" alt="">
-				<a class="hp-card__hashtag" href="./">#втренде</a>
-				<div class="hp-card__bottom">
-					<div class="hp-card__date">January 20, 2018</div>
-					<a class="hp-card__text" href="./">Voluptas provident sint, aliquid a incidunt, culpa placeat nemo vero.</a>
+			<div class="h-popular__item card-hp">
+				<img class="card-hp__image" src="https://source.unsplash.com/random/600x601?coin" alt="">
+				<a class="card-hp__hashtag" href="./">#втренде</a>
+				<div class="card-hp__bottom">
+					<div class="card-hp__date">January 20, 2018</div>
+					<a class="card-hp__text" href="./">Voluptas provident sint, aliquid a incidunt, culpa placeat nemo vero.</a>
 				</div>
 			</div>
-			<div class="h-popular__item hp-card">
-				<img class="hp-card__image" src="https://source.unsplash.com/random/601x600?coin" alt="">
-				<a class="hp-card__hashtag" href="./">#втренде</a>
-				<div class="hp-card__bottom">
-					<div class="hp-card__date">January 20, 2018</div>
-					<a class="hp-card__text" href="./">Suscipit eligendi expedita non distinctio aperiam doloremque dolores.</a>
+			<div class="h-popular__item card-hp">
+				<img class="card-hp__image" src="https://source.unsplash.com/random/601x600?coin" alt="">
+				<a class="card-hp__hashtag" href="./">#втренде</a>
+				<div class="card-hp__bottom">
+					<div class="card-hp__date">January 20, 2018</div>
+					<a class="card-hp__text" href="./">Suscipit eligendi expedita non distinctio aperiam doloremque dolores.</a>
 				</div>
 			</div>
-			<div class="h-popular__item hp-card">
-				<img class="hp-card__image" src="https://source.unsplash.com/random/600x601?trade" alt="">
-				<a class="hp-card__hashtag" href="./">#втренде</a>
-				<div class="hp-card__bottom">
-					<div class="hp-card__date">January 20, 2018</div>
-					<a class="hp-card__text" href="./">Minus illum iste ipsum error saepe temporibus repudiandae iure.</a>
+			<div class="h-popular__item card-hp">
+				<img class="card-hp__image" src="https://source.unsplash.com/random/600x601?trade" alt="">
+				<a class="card-hp__hashtag" href="./">#втренде</a>
+				<div class="card-hp__bottom">
+					<div class="card-hp__date">January 20, 2018</div>
+					<a class="card-hp__text" href="./">Minus illum iste ipsum error saepe temporibus repudiandae iure.</a>
 				</div>
 			</div>
 		</div>
@@ -180,22 +180,26 @@
 		<div class="h-program__items">
 			@@include("_card-p.html", {
 				"cls":"h-program__item",
-				"img":"brand-1.png"
+				"img":"brand-1.png",
+				"rate":4.8
 			})
-
+			
 			@@include("_card-p.html", {
 				"cls":"h-program__item",
-				"img":"brand-2.png"
+				"img":"brand-2.png",
+				"rate":4.1
 			})
-
+			
 			@@include("_card-p.html", {
 				"cls":"h-program__item",
-				"img":"brand-3.png"
+				"img":"brand-3.png",
+				"rate":3.3
 			})
-
+			
 			@@include("_card-p.html", {
 				"cls":"h-program__item",
-				"img":"brand-4.png"
+				"img":"brand-4.png",
+				"rate":2.4
 			})
 		</div>
 		<a class="h-program__more more" href="./">Все партнерки</a>
@@ -208,17 +212,20 @@
 		<div class="h-services__items">
 			@@include("_card-s.html", {
 				"cls":"h-services__item",
-				"img":"brand-5.png"
+				"img":"brand-5.png",
+				"promo":"saf546"
 			})
-
+			
 			@@include("_card-s.html", {
 				"cls":"h-services__item",
-				"img":"brand-1.png"
+				"img":"brand-1.png",
+				"promo":"dfg456"
 			})
-
+			
 			@@include("_card-s.html", {
 				"cls":"h-services__item",
-				"img":"brand-3.png"
+				"img":"brand-3.png",
+				"promo":"9s2f5a"
 			})
 		</div>
 		<a class="h-services__more more" href="./">Все сервисы</a>

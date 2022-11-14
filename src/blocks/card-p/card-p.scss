@@ -15,7 +15,7 @@
 	}
 
 	&__info {
-
+		margin-right: 30px;
 	}
 
 	&__top {
@@ -40,6 +40,23 @@
 	&__text {
 		line-height: 1.5;
 		margin-bottom: 15px;
+	}
+
+	&__range {
+		align-self: center;
+		margin-right: 30px;
+	}
+	
+	&__rating {
+		display: flex;
+
+		> span {
+			margin-right: 5px;
+		}
+	}
+
+	&__reviews {
+		text-transform: uppercase;
 	}
 
 	&__more {

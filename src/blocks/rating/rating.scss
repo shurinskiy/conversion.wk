@@ -1,0 +1,18 @@
+.rating {
+	$self: &;
+	display: flex;
+
+	&__star {
+		width: 17px;
+		height: 16px;
+		background: url('#{$images-path}icons-sprite.svg#icon-star-empty-view-black') center / contain no-repeat transparent;
+		
+		&.active {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-star-filled-view-purple');
+		}
+
+		&:not(:last-child) {
+			margin-right: 2px;
+		}
+	}
+}
