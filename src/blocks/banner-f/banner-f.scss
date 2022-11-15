@@ -1,0 +1,58 @@
+.banner-f {
+	$self: &;
+	box-sizing: border-box;
+	background: linear-gradient(180deg, #E5007F 0%, #EA709A 100%);
+	border-radius: 11px;
+	
+	&__inner {
+		padding: 22px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 985px;
+		margin: 0 auto;
+	}
+
+	&__text {
+		color: #FAD7E8;
+		font-family: "MB", sans-serif;
+		font-size: 27px;
+
+		&::before {
+			display: inline-block;
+			content: '';
+			width: 36px;
+			height: 23px;
+			background: url('#{$images-path}ic-hand.png') center / cover no-repeat transparent;
+			vertical-align: middle;
+			margin-right: 20px;
+		}
+	}
+
+	&__subscribe {
+		box-sizing: border-box;
+		height: 62px;
+		display: flex;
+		align-items: center;
+		padding: 5px 20px;
+		background-color: #fff;
+		border-radius: 100px;
+		text-decoration: none;
+		font-family: "MSB", sans-serif;
+		color: #D91B5C;
+
+		&::before {
+			display: block;
+			content: '';
+			width: 26px;
+			height: 26px;
+			border-radius: 50%;
+			background: url('#{$images-path}icons-sprite.svg#icon-tgm-view-white') center left 5px / 14px 11px no-repeat,  linear-gradient(180deg, #5AB0E9 0%, #3888C4 100%);
+			margin-right: 8px;
+		}
+	}
+
+	&__socials {
+		
+	}
+}

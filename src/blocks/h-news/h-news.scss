@@ -7,7 +7,7 @@
 	}
 
 	&__title {
-
+		margin-bottom: 45px;
 	}
 
 	&__inner {
@@ -55,7 +55,7 @@
 		display: flex;
 		border-radius: 7px;
 		overflow: hidden;
-		align-self: stretch;
+		align-self: flex-start;
 		min-width: 240px;
 
 		img {

@@ -11,18 +11,20 @@
 		</div>
 		<div class="card-p__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur similique incidunt corporis dignissimos, numquam, corrupti cupiditate deleniti explicabo pariatur fugit error...</div>
 	</div>
-	<div class="card-p__range">
-		<div class="card-p__rating">
-			<span>@@if(this.rate){@@rate}</span>
-			<div class="rating" data-rate="@@if(this.rate){@@rate}">
-				<span class="rating__star"></span>
-				<span class="rating__star"></span>
-				<span class="rating__star"></span>
-				<span class="rating__star"></span>
-				<span class="rating__star"></span>
+	<div class="card-p__side">
+		<div class="card-p__range">
+			<div class="card-p__rating">
+				<span>@@if(this.rate){@@rate}</span>
+				<div class="rating" data-rate="@@if(this.rate){@@rate}">
+					<span class="rating__star"></span>
+					<span class="rating__star"></span>
+					<span class="rating__star"></span>
+					<span class="rating__star"></span>
+					<span class="rating__star"></span>
+				</div>
 			</div>
+			<div class="card-p__reviews"><span>0</span> отзывов</div>
 		</div>
-		<div class="card-p__reviews"><span>0</span> отзывов</div>
+		<a class="card-p__more button button_outlined" href="./">Подробнее</a>
 	</div>
-	<a class="card-p__more button button_outlined" href="./">Подробнее</a>
 </div>

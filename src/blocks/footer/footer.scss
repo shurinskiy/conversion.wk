@@ -1,9 +1,78 @@
 .footer {
 	$self: &;
-	background-color: #201D2E;
-	border-radius: 40px 40px 0 0;
 
-	&__container {
-		min-height: 250px;
+	&__banner {
+		position: relative;
+		z-index: 1;
+		max-width: 1270px;
+		width: calc(100% - 80px);
+		margin: 0 auto -65px;
+	}
+
+	&__inner {
+		background-color: #201D2E;
+		border-radius: 40px 40px 0 0;
+	}
+	
+	&__columns {
+		padding-bottom: 50px;
+		padding-top: 130px;
+		color: #fff;
+		display: flex;
+		gap: 40px;
+	}
+
+	&__col {
+		flex-grow: 1;
+		max-width: 250px;
+
+		&:last-child {
+			margin-left: auto;
+		}
+	}
+
+	&__logo {
+		display: block;
+		max-width: 240px;
+		margin-bottom: 25px;
+	}
+
+	&__brief {
+
+	}
+
+	&__socials {
+
+	}
+
+	&__col-title {
+		font-family: "MB", sans-serif;
+		font-size: 22px;
+		margin-bottom: 10px;
+	}
+
+	&__col-item {
+		display: block;
+		color: #b4b4b4;
+		text-decoration: none;
+		padding: 10px 0;
+		// font-family: "MB", sans-serif;
+	}
+	
+	&__bottom {
+		color: #888;
+		box-sizing: border-box;
+		border-top: 1px solid #413F4D;
+		padding-bottom: 10px;
+		padding-top: 10px;
+		min-height: 100px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		a {
+			text-decoration: none;
+			color: inherit;
+		}
 	}
 }

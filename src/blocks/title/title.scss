@@ -3,5 +3,16 @@
 	color: #000;
 	font-family: "MB", sans-serif;
 	font-size: 32px;
-	margin-bottom: 45px;
+
+	@include media('<=sm') {
+		font-size: 28px;
+	}
+
+	@include media('<=xs') {
+		font-size: 26px;
+	}
+
+	@include media('<=xxs') {
+		font-size: 24px;
+	}
 }

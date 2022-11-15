@@ -1,0 +1,38 @@
+.subscribe-t {
+	$self: &;
+	box-sizing: border-box;
+	display: block;
+	background: linear-gradient(180deg, rgba(217, 27, 92, 0.9) 0%, rgba(0, 0, 0, 0.9) 190%);
+	border-radius: 8px;
+	padding: 10px 10px 10px 60px;
+	text-decoration: none;
+	color: #fff;
+	font-family: "MSB", sans-serif;
+	font-size: 13px;
+	position: relative;
+	max-width: 350px;
+
+	&::before {
+		box-sizing: border-box;
+		display: block;
+		content: '';
+		height: 24px;
+		width: 24px;
+		border-radius: 50%;
+		border: 2px solid #fff;
+		background: url('#{$images-path}icons-sprite.svg#icon-tgm-view-white') center / 10px 8px no-repeat, linear-gradient(180deg, #5AB0E9 0%, #3888C4 100%);
+		position: absolute;
+		left: 20px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	
+	span {
+		display: block;
+
+		&:last-child {
+			font-family: "M", sans-serif;
+			font-size: 10px;
+		}
+	}
+}

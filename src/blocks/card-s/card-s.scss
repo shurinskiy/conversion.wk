@@ -2,9 +2,14 @@
 	$self: &;
 	box-sizing: border-box;
 	display: flex;
-	padding: 30px;
+	padding: 28px 30px 30px;
 	background-color: #fff;
 	border-radius: 10px;
+	
+	@include media('<=md') {
+		flex-flow: column nowrap;
+		padding: 30px 20px;
+	}
 
 	&__brand {
 		width: 175px;
@@ -12,16 +17,29 @@
 		display: flex;
 		align-items: center;
 		margin-right: 40px;
+		
+		@include media('<=md') {
+			margin: 0 auto 40px;
+
+		}
 	}
 
 	&__info {
-
+		margin-right: 20px;
+		
+		@include media('<=md') {
+			margin: 0 0 20px;
+		}
 	}
 
 	&__top {
 		display: flex;
 		align-items: center;
 		margin-bottom: 5px;
+
+		@include media('<=md') {
+			margin-bottom: 10px;
+		}
 	}
 
 	&__title {
@@ -32,25 +50,41 @@
 	}
 
 	&__tags {
-
+		display: flex;
+		flex-wrap: wrap;
 	}
 
 	&__tag {
-		margin-right: 10px;		
+		margin: 3px 10px 3px 0;		
 	}
 
 	&__text {
-		margin-right: 20px;
 		line-height: 1.5;
 	}
 
-	&__code {
+	&__side {
+		display: flex;
 		align-self: center;
+		justify-content: space-between;
+		
+		@include media('<=md') {
+			align-self: stretch;
+		}
+	}
+
+	&__code {
 		margin-right: 40px;
+		min-width: 190px;
+
+		@include media('<=md') {
+			margin-right: 10px;
+			min-width: auto;
+			width: 100%;
+			max-width: 190px;
+		}
 	}
 
 	&__best {
 		flex-shrink: 0;
-		align-self: center;
 	}
 }

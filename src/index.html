@@ -3,7 +3,13 @@
 
 <section class="h-popular">
 	<div class="h-popular__container container">
-		<h1 class="h-popular__title title">Популярные материалы</h1>
+		<h1 class="h-popular__title title">
+			<span class="h-popular__title-text">Популярные материалы</span>
+			<a class="h-popular__title-side subscribe-t" href="./">
+				<span>Подписаться в telegram</span>
+				<span>Для быстрой инфы</span>
+			</a>
+		</h1>
 		<div class="h-popular__items">
 			<div class="h-popular__item card-hp">
 				<img class="card-hp__image" src="https://source.unsplash.com/random/600x600?coin" alt="">
@@ -138,33 +144,29 @@
 <section class="h-blogs">
 	<div class="h-blogs__container container">
 		<h2 class="h-blogs__title title">Авторские блоги</h2>
-		<div class="h-blogs__inner">
-			<div class="h-blogs__items">
-				@@include("_card-a.html", {
-					"cls":"card-a_blog h-blogs__item",
-					"img":"card-a-image-0.png",
-					"blog":true
-				})
-	
-				@@include("_card-a.html", {
-					"cls":"card-a_blog h-blogs__item",
-					"img":"card-a-image-0.png",
-					"blog":true
-				})
-	
-				@@include("_card-a.html", {
-					"cls":"card-a_blog h-blogs__item",
-					"img":"card-a-image-0.png",
-					"blog":true
-				})
-			</div>
-			<div class="h-blogs__side">
-				<a class="h-blogs__banner" href="./">
-					<img src="./images/banner-image-2.png" alt="">
-				</a>
-				<a class="h-blogs__more more" href="./">Все блоги</a>
-			</div>
+		<div class="h-blogs__items">
+			@@include("_card-a.html", {
+				"cls":"card-a_blog h-blogs__item",
+				"img":"card-a-image-0.png",
+				"blog":true
+			})
+
+			@@include("_card-a.html", {
+				"cls":"card-a_blog h-blogs__item",
+				"img":"card-a-image-0.png",
+				"blog":true
+			})
+
+			@@include("_card-a.html", {
+				"cls":"card-a_blog h-blogs__item",
+				"img":"card-a-image-0.png",
+				"blog":true
+			})
+			<a class="h-blogs__banner" href="./">
+				<img src="./images/banner-image-2.png" alt="">
+			</a>
 		</div>
+		<a class="h-blogs__more more" href="./">Все блоги</a>
 	</div>
 </section>
 

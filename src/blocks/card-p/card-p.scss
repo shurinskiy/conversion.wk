@@ -2,9 +2,14 @@
 	$self: &;
 	box-sizing: border-box;
 	display: flex;
-	padding: 30px;
+	padding: 28px 30px 30px;
 	background-color: #ECEFF6;
 	border-radius: 10px;
+	
+	@include media('<=md') {
+		padding: 30px 20px;
+		flex-flow: column nowrap;
+	}
 
 	&__brand {
 		width: 175px;
@@ -12,16 +17,28 @@
 		display: flex;
 		align-items: center;
 		margin-right: 40px;
+
+		@include media('<=md') {
+			margin: 0 auto 40px;
+		}
 	}
 
 	&__info {
 		margin-right: 30px;
+
+		@include media('<=md') {
+			margin: 0;
+		}
 	}
 
 	&__top {
 		display: flex;
 		align-items: center;
 		margin-bottom: 5px;
+
+		@include media('<=md') {
+			margin-bottom: 10px;
+		}
 	}
 
 	&__title {
@@ -30,21 +47,34 @@
 	}
 	
 	&__tags {
-		
+		display: flex;
+		flex-wrap: wrap;
 	}
 	
 	&__tag {
-		margin-right: 10px;		
+		margin: 3px 10px 3px 0;		
 	}
 
 	&__text {
 		line-height: 1.5;
-		margin-bottom: 15px;
+
+		@include media('<=md') {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__side {
+		display: flex;
+		justify-content: space-between;
 	}
 
 	&__range {
 		align-self: center;
 		margin-right: 30px;
+		
+		@include media('<=md') {
+			margin-right: 5px;
+		}
 	}
 	
 	&__rating {

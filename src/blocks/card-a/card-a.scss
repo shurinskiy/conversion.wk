@@ -10,6 +10,10 @@
 	&_blog {
 		flex-flow: row nowrap;
 		min-height: auto;
+
+		@include media('<=md') {
+			flex-flow: column nowrap;
+		}
 		
 		#{$self}__image {
 			height: auto;
@@ -28,6 +32,12 @@
 
 		#{$self}__title {
 			font-size: 16px;
+		}
+
+		#{$self}__text {
+			@include media('<=md') {
+				margin-bottom: 30px;
+			}
 		}
 	}
 
@@ -84,6 +94,10 @@
 	&__text {
 		color: #474747;
 		margin-bottom: 10px;
+
+		@include media('<=xs') {
+			font-size: 14px;
+		}
 	}
 
 	&__bottom {
