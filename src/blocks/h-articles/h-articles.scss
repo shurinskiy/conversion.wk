@@ -1,7 +1,15 @@
 .h-articles {
 	$self: &;
-	background-color: #ECEFF6;
-	padding: 50px 0;
+	
+	&_home {
+		padding: 50px 0;
+		background-color: #ECEFF6;
+	}
+
+	&_traffic {
+		background-color: #F7F8FC;
+		margin-bottom: 40px;
+	}
 
 	&__container {
 
@@ -36,5 +44,9 @@
 
 	&__more {
 		margin-left: auto;
+	}
+
+	&__pagination {
+		margin-bottom: 50px;
 	}
 }

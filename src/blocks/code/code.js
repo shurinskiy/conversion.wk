@@ -12,10 +12,10 @@ import { addUnderlay, makeModalFrame } from "../../js/lib";
 				const self = this;
 
 				copy(promo.innerText);
-				makeModalFrame.call(promo, { el: self, scrollLock }, function(el) {
+				makeModalFrame.call(promo, { scrollLock }, function(el) {
 					this.querySelector('.m-promocode__hero > span').innerText = self.dataset.cover;
-					this.querySelector('.m-promocode__text > span').innerText = promo.innerText;
-					this.querySelector('.m-promocode__link').href = promo.dataset.url;
+					this.querySelector('.m-promocode__text > span').innerText = el.innerText;
+					this.querySelector('.m-promocode__link').href = el.dataset.url;
 				});
 			};
 

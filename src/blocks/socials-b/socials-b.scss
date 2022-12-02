@@ -1,6 +1,17 @@
 .socials-b {
 	$self: &;
-	display: flex;
+
+	&_footer {
+		#{$self}__item {
+			&_twt { background-image: url('#{$images-path}icons-sprite.svg#icon-twt-view-black'); }
+			
+			&_ins { background-image: url('#{$images-path}icons-sprite.svg#icon-inst-view-black'); }
+			
+			&_vkt { background-image: url('#{$images-path}icons-sprite.svg#icon-vk-view-black'); }
+			
+			&_tgm { background-image: url('#{$images-path}icons-sprite.svg#icon-tgm-view-black'); }
+		}
+	}
 
 	&__item {
 		width: 40px;

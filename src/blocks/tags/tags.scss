@@ -1,0 +1,83 @@
+.tags {
+	$self: &;
+	@keyframes fade_in {
+		from { opacity: 0; }
+		to { opacity: 1; }
+	}
+	
+	&__inner {
+		display: flex;
+		overflow: hidden;
+
+		@include media('<=sm') {
+			overflow: visible;
+		}
+	}
+
+	&__item {
+		background-color: #ECEFF6;
+		color: #181819;
+		text-decoration: none;
+		font-family: "MSB", sans-serif;
+		font-size: 18px;
+		padding: 10px 15px;
+		border-radius: 10px;
+		margin: 0 15px 15px 0;
+		min-width: 100px;
+		text-align: center;
+		display: none;
+		opacity: 0;
+		animation: fade_in 0.3s;
+		animation-fill-mode: forwards;
+		width: auto;
+		
+		@include media('<=sm') {
+			display: block;
+			margin: 0 0 15px 0;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 16px;
+			min-width: 90px;
+		}
+		
+		&:nth-child(-n+7) {
+			display: block;
+			opacity: 1;
+			
+			@include media('<=lg') {
+				display: none;
+				opacity: 0;
+			}
+		}
+		
+		&:nth-child(-n+6) {
+			display: block;
+			opacity: 1;
+
+			@include media('<=md') {
+				display: none;
+				opacity: 0;
+			}
+		}
+		
+		&:nth-child(-n+5) {
+			display: block;
+			opacity: 1;
+		}
+	}
+	
+	&__more {
+		@extend %reset-button;
+		background-color: #ECEFF6;
+		font-family: "MSB", sans-serif;
+		padding: 10px 15px;
+		border-radius: 10px;
+		margin: 0 0 15px auto;
+		font-size: 18px;
+
+		@include media('<=sm') {
+			display: none;
+		}
+	}
+}

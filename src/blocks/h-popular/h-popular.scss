@@ -1,6 +1,7 @@
 .h-popular {
 	$self: &;
 	margin-bottom: 50px;
+	padding-top: 30px;
 
 	&__container {
 
@@ -84,8 +85,6 @@
 
 	&__banner {
 		display: block;
-		border-radius: 10px;
-		overflow: hidden;
 		margin-bottom: 20px;
 
 		img {

@@ -45,6 +45,12 @@
 			top: 20px; right: 20px;
 			height: 25px;
 			width: 25px;
+			
+			@include media('<=xxs') {
+				top: 15px; right: 15px;
+				height: 20px;
+				width: 20px;
+			}
 		}
 
 		#{$self}__body {

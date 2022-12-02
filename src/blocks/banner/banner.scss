@@ -1,4 +1,10 @@
 .banner {
 	$self: &;
+	display: block;
+	overflow: hidden;
+	border-radius: 10px;
 
+	img {
+		display: block;
+	}
 }

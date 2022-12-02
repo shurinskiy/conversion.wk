@@ -53,6 +53,7 @@
 	"dependencies": {
 		"animate-scss": "^3.2.1",
 		"copy-to-clipboard": "^3.3.3",
+		"enquire.js": "^2.1.6",
 		"jquery": "^3.6.0",
 		"scroll-lock": "^2.1.5",
 		"swiper": "^8.4.4"

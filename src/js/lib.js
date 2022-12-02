@@ -41,6 +41,29 @@ export const cloneObj = (obj) => {
 }
 
 
+// Отложить вызов функции
+export const throttle = (fn, delay) => {
+	let inProgress = false;
+	return (...args) => {
+		if (inProgress) {
+			return;
+		}
+
+		inProgress = true;
+		fn(...args);
+		
+		setTimeout(() => {
+			inProgress = false;
+		}, delay);
+	}
+}
+
+/* Пример использования */
+// const handleResize = throttle(() => { setWindowSize(window.innerWidth) }, 1000);
+// window.addEventListener("resize", handleResize);
+
+
+
 // Получить высоту скрытого элемента
 export const getHeight = (el) => {
 	if (!el) return;
@@ -916,4 +939,27 @@ export const makeModalFrame = function(options = {}, cb) {
 			}
 		});
 	}
+}
+
+
+// Плавная прокрутка к заданному элементу
+export const scrollToId = (items) => {
+	items.forEach(item => {
+		item.addEventListener('click', (e) => {
+			e.preventDefault();
+			document.getElementById(item.getAttribute('href').substring(1)).scrollIntoView({
+				behavior: 'smooth',
+				block: 'start'
+			});
+		});
+	});		
+}
+
+
+// Плавная прокрутка к верху страницы
+export const scrollToTop = (item) => {
+	item.addEventListener('click', (e) => {
+		e.preventDefault();
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	});
 }

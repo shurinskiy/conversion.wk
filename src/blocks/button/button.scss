@@ -19,7 +19,7 @@
 	&_large {
 		color: #fff;
 		border-radius: 14px;
-		background: #D91B5C;
+		background: #{$color};
 		box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.25);
 		height: 70px;
 		width: 100%;
@@ -42,7 +42,7 @@
 	&_small {
 		color: #fff;
 		border-radius: 4px;
-		background: #D91B5C;
+		background: #{$color};
 		box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.25);
 		border: 1px solid rgba(255, 255, 255, 0.3);
 		font-family: "M", sans-serif;
@@ -65,8 +65,8 @@
 
 	&_outlined {
 		border-radius: 10px;
-		border: 1px solid #D91B5C;
-		color: #D91B5C;
+		border: 1px solid #{$color};
+		color: #{$color};
 		min-height: 44px;
 	}
 }

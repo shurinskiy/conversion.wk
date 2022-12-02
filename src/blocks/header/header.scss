@@ -70,7 +70,7 @@
 			margin: 0;
 			background-color: #fff;		
 			box-shadow: 5px 0 20px rgb(0 0 0 / 10%);
-			transition: left 0.3s ease-in;
+			transition: left 0.3s ease-out;
 			overflow: auto;
 			
 			#{$self}__search {

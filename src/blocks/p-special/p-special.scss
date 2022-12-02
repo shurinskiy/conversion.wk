@@ -1,6 +1,6 @@
 .p-special {
 	$self: &;
-	border: 1px solid #D91B5C;
+	border: 1px solid #{$color};
 	background-color: #fff;
 	padding: 30px 30px 30px 40px;
 	display: flex;
@@ -27,7 +27,7 @@
 		position: absolute;
 		left: -25px;
 		bottom: calc(100% - 8px);
-		background-color: #E31E62;
+		background-color: #{$color};
 		color: #fff;
 		padding: 4px 28px;
 		font-size: 14px;

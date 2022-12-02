@@ -1,7 +1,7 @@
 .banner-f {
 	$self: &;
 	box-sizing: border-box;
-	background: linear-gradient(180deg, #E5007F 0%, #EA709A 100%);
+	background: linear-gradient(180deg, #{$color} 0%, lighten($color, 20%) 100%);
 	border-radius: 11px;
 	
 	&__inner {
@@ -11,12 +11,18 @@
 		justify-content: space-between;
 		max-width: 985px;
 		margin: 0 auto;
+		
+		@include media('<=md') {
+			max-width: none;
+			flex-flow: column nowrap;
+		}
 	}
 
 	&__text {
 		color: #FAD7E8;
 		font-family: "MB", sans-serif;
 		font-size: 27px;
+		text-align: center;
 
 		&::before {
 			display: inline-block;
@@ -26,6 +32,22 @@
 			background: url('#{$images-path}ic-hand.png') center / cover no-repeat transparent;
 			vertical-align: middle;
 			margin-right: 20px;
+			
+			@include media('<=xxs') {
+				margin-right: 10px;
+			}
+		}
+		
+		@include media('<=md') {
+			margin: 0 0 20px;
+		}
+		
+		@include media('<=xs') {
+			font-size: 24px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 20px;
 		}
 	}
 
@@ -39,10 +61,17 @@
 		border-radius: 100px;
 		text-decoration: none;
 		font-family: "MSB", sans-serif;
-		color: #D91B5C;
+		color: #{$color};
+		margin: 0 12px;
+		
+		@include media('<=xxs') {
+			height: 55px;
+			padding: 5px 15px;
+		}
 
 		&::before {
 			display: block;
+			flex-shrink: 0;
 			content: '';
 			width: 26px;
 			height: 26px;
@@ -50,9 +79,17 @@
 			background: url('#{$images-path}icons-sprite.svg#icon-tgm-view-white') center left 5px / 14px 11px no-repeat,  linear-gradient(180deg, #5AB0E9 0%, #3888C4 100%);
 			margin-right: 8px;
 		}
+		
+		@include media('<=md') {
+			margin: 0 0 25px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 15px;
+		}
 	}
 
 	&__socials {
-		
+		display: flex;
 	}
 }

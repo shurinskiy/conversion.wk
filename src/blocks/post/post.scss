@@ -1,0 +1,28 @@
+.post {
+	$self: &;
+	margin-bottom: 40px;
+
+	&__container {
+
+	}
+
+	&__subtitle {
+		font-family: "MSB", sans-serif;
+		font-size: 21px;
+		margin-bottom: 25px;
+	}
+
+	p {
+		margin-bottom: 25px;
+		line-height: 1.5;
+	}
+
+	a {
+		color: #{$color};
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

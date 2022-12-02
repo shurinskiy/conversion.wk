@@ -1,0 +1,74 @@
+.p-top {
+	$self: &;
+	background-color: #F7F8FC;
+	padding-top: 40px;
+	
+	&__container {
+		
+	}
+	
+	&__head {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-gap: 20px;
+		align-items: center;
+		margin-bottom: 24px;
+
+		@include media('<=xs') {
+			display: block;
+		}
+	}
+
+	&__breadcrumbs {
+		grid-column: span 9;
+		font-size: 14px;
+		
+		@include media('<=md') {
+			grid-column: span 8;
+		}
+		
+		@include media('<=sm') {
+			grid-column: span 7;
+		}
+		
+		@include media('<=xs') {
+			margin-bottom: 7px;
+		}
+		
+		a {
+			text-decoration: none;
+			color: #767779;
+			display: inline-block;
+			padding: 10px 0;
+
+			&::after {
+				display: inline-block;
+				content: '';
+				height: 9px;
+				width: 5px;
+				background: url('#{$images-path}icons-sprite.svg#icon-arr-right-view-black') center / auto no-repeat transparent;
+				margin: 0 10px;
+			}
+		}
+	}
+	
+	&__side {
+		grid-column: span 3;
+		
+		@include media('<=md') {
+			grid-column: span 4;
+		}
+		
+		@include media('<=sm') {
+			grid-column: span 5;
+		}
+	}
+
+	&__banner {
+		margin-bottom: 25px;
+	}
+
+	&__tags {
+		margin-bottom: 17px;
+	}
+}

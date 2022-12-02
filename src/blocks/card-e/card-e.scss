@@ -1,6 +1,6 @@
 .card-e {
 	$self: &;
-	border: 1px solid #D91B5C;
+	border: 1px solid #{$color};
 	border-radius: 10px;
 	overflow: hidden;
 	background: linear-gradient(90deg, rgba(255,255,255,1) 30%, rgba(255,255,255,0.5) 100%),  url('#{$images-path}events-image-1.png') center / cover no-repeat;
@@ -41,7 +41,7 @@
 			content: '';
 			height: 25px;
 			width: 25px;
-			background-color: #D91B5C;
+			background-color: #{$color};
 			background-repeat: no-repeat;
 			background-position: center;
 			border-radius: 50%;
