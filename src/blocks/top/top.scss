@@ -1,7 +1,10 @@
-.p-top {
+.top {
 	$self: &;
-	background-color: #F7F8FC;
 	padding-top: 40px;
+	
+	&_light {
+		background-color: #F7F8FC;
+	}
 	
 	&__container {
 		
@@ -9,10 +12,10 @@
 	
 	&__head {
 		display: grid;
-		grid-template-columns: repeat(12, 1fr);
+		grid-template-columns: 1fr 275px;
 		grid-gap: 20px;
 		align-items: center;
-		margin-bottom: 24px;
+		margin-bottom: 20px;
 
 		@include media('<=xs') {
 			display: block;
@@ -20,16 +23,8 @@
 	}
 
 	&__breadcrumbs {
-		grid-column: span 9;
+		grid-column: span 1;
 		font-size: 14px;
-		
-		@include media('<=md') {
-			grid-column: span 8;
-		}
-		
-		@include media('<=sm') {
-			grid-column: span 7;
-		}
 		
 		@include media('<=xs') {
 			margin-bottom: 7px;
@@ -53,22 +48,18 @@
 	}
 	
 	&__side {
-		grid-column: span 3;
-		
-		@include media('<=md') {
-			grid-column: span 4;
-		}
-		
-		@include media('<=sm') {
-			grid-column: span 5;
-		}
+		grid-column: span 1;
 	}
 
 	&__banner {
-		margin-bottom: 25px;
+
 	}
 
 	&__tags {
-		margin-bottom: 17px;
+
+	}
+
+	&__author {
+		margin-bottom: 40px;
 	}
 }

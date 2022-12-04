@@ -1,17 +1,17 @@
 @@include("_head.html") 
 @@include("_header.html") 
 
-<section class="h-popular">
-	<div class="h-popular__container container">
-		<h1 class="h-popular__title title">
-			<span class="h-popular__title-text">Популярные материалы</span>
-			<a class="h-popular__title-side subscribe-t" href="./">
+<section class="popular mb-5 pt-3">
+	<div class="popular__container container">
+		<h1 class="popular__title title mb-3">
+			<span class="popular__title-text">Популярные материалы</span>
+			<a class="popular__title-side subscribe-t" href="./">
 				<span>Подписаться в telegram</span>
 				<span>Для быстрой инфы</span>
 			</a>
 		</h1>
-		<div class="h-popular__items">
-			<div class="h-popular__item card-hp">
+		<div class="popular__items">
+			<div class="popular__item card-hp">
 				<img class="card-hp__image" src="https://source.unsplash.com/random/600x600?coin" alt="">
 				<a class="card-hp__hashtag" href="./">#втренде</a>
 				<div class="card-hp__bottom">
@@ -19,7 +19,7 @@
 					<a class="card-hp__text" href="./">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, nesciunt.</a>
 				</div>
 			</div>
-			<div class="h-popular__item card-hp card-hp_large">
+			<div class="popular__item card-hp card-hp_large">
 				<img class="card-hp__image" src="https://source.unsplash.com/random/600x600?trade" alt="">
 				<a class="card-hp__hashtag" href="./">#втренде</a>
 				<div class="card-hp__bottom">
@@ -27,7 +27,7 @@
 					<a class="card-hp__text" href="./">Sapiente sed nostrum quidem, pariatur nulla fuga ad dolorum esse.</a>
 				</div>
 			</div>
-			<div class="h-popular__item card-hp">
+			<div class="popular__item card-hp">
 				<img class="card-hp__image" src="https://source.unsplash.com/random/600x601?coin" alt="">
 				<a class="card-hp__hashtag" href="./">#втренде</a>
 				<div class="card-hp__bottom">
@@ -35,7 +35,7 @@
 					<a class="card-hp__text" href="./">Voluptas provident sint, aliquid a incidunt, culpa placeat nemo vero.</a>
 				</div>
 			</div>
-			<div class="h-popular__item card-hp">
+			<div class="popular__item card-hp">
 				<img class="card-hp__image" src="https://source.unsplash.com/random/601x600?coin" alt="">
 				<a class="card-hp__hashtag" href="./">#втренде</a>
 				<div class="card-hp__bottom">
@@ -43,7 +43,7 @@
 					<a class="card-hp__text" href="./">Suscipit eligendi expedita non distinctio aperiam doloremque dolores.</a>
 				</div>
 			</div>
-			<div class="h-popular__item card-hp">
+			<div class="popular__item card-hp">
 				<img class="card-hp__image" src="https://source.unsplash.com/random/600x601?trade" alt="">
 				<a class="card-hp__hashtag" href="./">#втренде</a>
 				<div class="card-hp__bottom">
@@ -52,57 +52,57 @@
 				</div>
 			</div>
 		</div>
-		<a class="h-popular__banner banner" href="./">
+		<a class="popular__banner banner" href="./">
 			<img src="./images/banner-image-1.png" alt="">
 		</a>
 	</div>
 </section>
 
-<section class="h-articles h-articles_home">
-	<div class="h-articles__container container">
-		<h2 class="h-articles__title title">Свежие статьи</h2>
-		<div class="h-articles__items">
+<section class="section section_grey pbt-5">
+	<div class="section__container container">
+		<h2 class="section__title title mb-5">Свежие статьи</h2>
+		<div class="section__items section__items_cards mb-5">
 			@@include("_card-a.html", {
-				"cls":"h-articles__item",
+				"cls":"section__item",
 				"img":"card-a-image-1.png"
 			})
 
 			@@include("_card-a.html", {
-				"cls":"h-articles__item",
+				"cls":"section__item",
 				"img":"card-a-image-2.png"
 			})
 
 			@@include("_card-a.html", {
-				"cls":"h-articles__item",
+				"cls":"section__item",
 				"img":"card-a-image-3.png"
 			})
 
 			@@include("_card-a.html", {
-				"cls":"h-articles__item",
+				"cls":"section__item",
 				"img":"card-a-image-4.png"
 			})
 
 			@@include("_card-a.html", {
-				"cls":"h-articles__item",
+				"cls":"section__item",
 				"img":"card-a-image-5.png"
 			})
 
 			@@include("_card-a.html", {
-				"cls":"h-articles__item",
+				"cls":"section__item",
 				"img":"card-a-image-6.png"
 			})
 
 			@@include("_card-a.html", {
-				"cls":"h-articles__item",
+				"cls":"section__item",
 				"img":"card-a-image-1.png"
 			})
 
 			@@include("_card-a.html", {
-				"cls":"h-articles__item",
+				"cls":"section__item",
 				"img":"card-a-image-2.png"
 			})
 		</div>
-		<a class="h-articles__more more" href="./">Все статьи</a>
+		<a class="section__more more" href="./">Все статьи</a>
 	</div>
 </section>
 
@@ -170,130 +170,128 @@
 	</div>
 </section>
 
-<section class="h-program">
-	<div class="h-program__container container">
-		<h2 class="h-program__title title">Рейтинг партнерок</h2>
-		<!-- <div class="h-program__special p-special">
-			<div class="p-special__brand"><img src="./images/brand-2.png" alt=""></div>
-			<div class="p-special__name">1 Wieners</div>
-			<div class="p-special__text">Индивидуальные CPA-ставки для всех веб-мастеров. От 50% прибыли от игрока пожизненно по RevShare. До 200$ за игрока, привлеченного по CPA. Готовые промо-материалы.</div>
-			<div class="p-special__badge">AFFY рекомендует!</div>
-		</div> -->
-		<div class="h-program__items">
+<section class="section pbt-5">
+	<div class="section__container container">
+		<h2 class="section__title title mb-5">Рейтинг партнерок</h2>
+		<div class="section__items section__items_single mb-5">
 			@@include("_card-p.html", {
-				"cls":"h-program__item",
+				"cls":"card-p_grey section__item",
 				"img":"brand-1.png",
+				"tag":"tag_white",
 				"rate":4.8
 			})
 			
 			@@include("_card-p.html", {
-				"cls":"h-program__item",
+				"cls":"card-p_grey section__item",
 				"img":"brand-2.png",
+				"tag":"tag_white",
 				"rate":4.1
 			})
 			
 			@@include("_card-p.html", {
-				"cls":"h-program__item",
+				"cls":"card-p_grey section__item",
 				"img":"brand-3.png",
+				"tag":"tag_white",
 				"rate":3.3
 			})
 			
 			@@include("_card-p.html", {
-				"cls":"h-program__item",
+				"cls":"card-p_grey section__item",
 				"img":"brand-4.png",
+				"tag":"tag_white",
 				"rate":2.4
 			})
 		</div>
-		<a class="h-program__more more" href="./">Все партнерки</a>
+		<a class="section__more more" href="./">Все партнерки</a>
 	</div>
 </section>
 
-<section class="h-services">
-	<div class="h-services__container container">
-		<h2 class="h-services__title title">Сервисы</h2>
-		<div class="h-services__items">
+<section class="section section_grey pbt-5">
+	<div class="section__container container">
+		<h2 class="section__title title mb-5">Сервисы</h2>
+		<div class="section__items section__items_single mb-5">
 			@@include("_card-s.html", {
-				"cls":"h-services__item",
+				"cls":"section__item",
 				"img":"brand-5.png",
 				"promo":"saf546"
 			})
 			
 			@@include("_card-s.html", {
-				"cls":"h-services__item",
+				"cls":"section__item",
 				"img":"brand-1.png",
 				"promo":"dfg456"
 			})
 			
 			@@include("_card-s.html", {
-				"cls":"h-services__item",
+				"cls":"section__item",
 				"img":"brand-3.png",
 				"promo":"9s2f5a"
 			})
 		</div>
-		<a class="h-services__more more" href="./">Все сервисы</a>
+		<a class="section__more more" href="./">Все сервисы</a>
 	</div>
 </section>
 
-<section class="h-events">
-	<div class="h-events__container container">
-		<h2 class="h-events__title title">Мероприятия</h2>
-		<div class="h-events__items">
+<section class="section pbt-5">
+	<div class="section__container container">
+		<h2 class="section__title title mb-5">Мероприятия</h2>
+		<div class="section__items section__items_double mb-5">
 			@@include("_card-e.html", {
-				"cls":"h-events__item",
+				"cls":"section__item",
 			})
 			@@include("_card-e.html", {
-				"cls":"h-events__item",
+				"cls":"section__item",
 			})
 		</div>
-		<a class="h-events__more more" href="./">Все мероприятия</a>
+		<a class="section__more more" href="./">Все мероприятия</a>
 	</div>
 </section>
 
-<section class="h-learning">
-	<div class="h-learning__container container">
-		<h2 class="h-learning__title title">Обучение</h2>
-		<div class="h-learning__items">
+<section class="section section_grey pbt-5">
+	<div class="section__container container">
+		<h2 class="section__title title mb-5">Обучение</h2>
+		<div class="section__items section__items_cards mb-5">
 			@@include("_card-l.html", {
-				"cls":"h-learning__item",
+				"cls":"section__item",
 				"img":"card-l-image-1.png"
 			})
 
 			@@include("_card-l.html", {
-				"cls":"h-learning__item",
+				"cls":"section__item",
 				"img":"card-l-image-1.png"
 			})
 
 			@@include("_card-l.html", {
-				"cls":"h-learning__item",
+				"cls":"section__item",
 				"img":"card-l-image-1.png"
 			})
 
 			@@include("_card-l.html", {
-				"cls":"h-learning__item",
+				"cls":"section__item",
 				"img":"card-l-image-1.png"
 			})
 		</div>
-		<a class="h-learning__more more" href="./">Все курсы</a>
+		<a class="section__more more" href="./">Все курсы</a>
 	</div>
 </section>
 
-<section class="h-vacancy">
-	<div class="h-vacancy__container container">
-		<h2 class="h-vacancy__title title">Вакансии</h2>
-		<div class="h-vacancy__items">
+<section class="section pbt-5">
+	<div class="section__container container">
+		<h2 class="section__title title mb-5">Вакансии</h2>
+		<div class="section__items section__items_triple mb-5">
 			@@include("_card-v.html", {
-				"cls":"h-vacancy__item"
+				"cls":"section__item"
 			})
 
 			@@include("_card-v.html", {
-				"cls":"h-vacancy__item"
+				"cls":"section__item"
 			})
 
 			@@include("_card-v.html", {
-				"cls":"h-vacancy__item"
+				"cls":"section__item"
 			})
 		</div>
-		<a class="h-vacancy__more more" href="./">Все вакансии</a>
+		<a class="section__more more" href="./">Все вакансии</a>
 	</div>
 </section>
 

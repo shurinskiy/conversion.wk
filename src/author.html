@@ -7,7 +7,7 @@
 			<div class="top__breadcrumbs">
 				<a href="./">Главная</a>
 				<a href="./">Категория</a>
-				<span>Статьи</span>
+				<span>Автор</span>
 			</div>
 			<a class="top__side subscribe-t" href="./">
 				<span>Подписаться в telegram</span>
@@ -17,13 +17,13 @@
 		<a class="top__banner banner mb-2" href="./">
 			<img src="./images/banner-image-1.png" alt="">
 		</a>
-		@@include("_tags.html")
+		@@include("_card-au.html")
 	</div>
 </section>
 
-<section class="section section_light pbt-5">
+<section class="section section_light section_bottom pt-5">
 	<div class="section__container container">
-		<h2 class="section__title title mb-2">Трафик</h2>
+		<h2 class="section__title title mb-2">Статьи автора</h2>
 		<div class="section__items section__items_cards mb-5">
 			@@include("_card-a.html", {
 				"cls":"section__item",
@@ -65,7 +65,7 @@
 				"img":"card-a-image-2.png"
 			})
 		</div>
-		<div class="section__pagination pagination">
+		<div class="section__pagination pagination mb-10">
 			<a class="pagination__link pagination__link_prev" href="./"></a>
 			<a class="pagination__link active" href="./">1</a>
 			<a class="pagination__link" href="./">2</a>
@@ -78,15 +78,6 @@
 			<a class="pagination__link pagination__link_next" href="./"></a>
 		</div>
 	</div>
-</section>
-
-<section class="post pt-5">
-	<div class="post__container container mb-5">
-		<h2 class="post__subtitle">Как выбрать партнерку и вертикаль</h2>
-		<p>У каждого успешного арбитражника есть свой подход к выбору партнерской сети и вертикалей. Популярностью пользуются <a href="./">беттинг и гемблинг</a> вертикали. Они высокодоходные и не имеют потолка для опытных вебов. Но не все новички готовы платить за вход в эту вертикаль, поэтому в основном ниша пользуется популярностью у опытных арбитражников.</p>
-		<p>Чтобы получить максимальный профит в любой вертикали, важно правильно выбрать партнерку для сотрудничества.</p>
-		<p>У каждого успешного арбитражника есть свой подход к выбору партнерской сети и вертикалей. Популярностью пользуются <a href="./">беттинг и гемблинг</a> вертикали. Они высокодоходные и не имеют потолка для опытных вебов. Но не все новички готовы платить за вход в эту вертикаль, поэтому в основном ниша пользуется популярностью у опытных арбитражников.</p>
-	</div>	
 </section>
 
 @@include("_bottom.html")

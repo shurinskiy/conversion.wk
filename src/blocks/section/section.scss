@@ -1,0 +1,98 @@
+.section {
+	$self: &;
+	
+	&_grey {
+		background-color: #eceff6;
+	}
+	
+	&_light {
+		background-color: #F7F8FC;
+	}
+
+	&_bottom {
+		padding-bottom: 105px;
+		margin-bottom: -105px;
+	}
+	
+	&__container {
+		
+	}
+	
+	&__title {
+
+	}
+	
+	&__subtitle {
+		font-family: "MB", sans-serif;
+		font-size: 24px;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 20px;
+		
+		&_single {
+			@include media('<=md') {
+				grid-template-columns: repeat(2, 1fr);
+			}
+			
+			@include media('<=xs') {
+				grid-template-columns: 1fr;
+			}
+		}
+
+		&_double {
+			grid-template-columns: repeat(2, 1fr);
+		
+			@include media('<=md') {
+				grid-template-columns: 1fr;
+			}
+		}
+
+		&_triple {
+			grid-template-columns: repeat(3, 1fr);
+		
+			@include media('<=sm') {
+				grid-template-columns: repeat(2, 1fr);
+			}
+			
+			@include media('<=xs') {
+				grid-template-columns: 1fr;
+			}
+		}
+		
+		&_cards {
+			grid-template-columns: repeat(4, 1fr);
+		
+			@include media('<=lg') {
+				grid-template-columns: repeat(3, 1fr);
+			}
+			
+			@include media('<=sm') {
+				grid-template-columns: repeat(2, 1fr);
+			}
+			
+			@include media('<=xxs') {
+				grid-template-columns: 1fr;
+			}
+		}
+	}
+
+	&__item {
+		grid-column: span 1;		
+	}
+
+	&__more {
+		margin-left: auto;
+	}
+
+	&__pagination {
+
+	}
+
+	&__button {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

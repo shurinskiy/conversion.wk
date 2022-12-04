@@ -5,6 +5,10 @@
 	padding: 28px 30px 30px;
 	background-color: #fff;
 	border-radius: 10px;
+
+	&_grey {
+		background-color: #ECEFF6;
+	}
 	
 	@include media('<=md') {
 		flex-flow: column nowrap;

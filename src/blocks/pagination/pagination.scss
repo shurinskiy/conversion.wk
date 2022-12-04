@@ -50,12 +50,26 @@
 			span {
 				margin: 0 12px;
 				font-size: 18px;
+				
+				@include media('<=md') {
+					font-size: 16px;
+					margin: 0 8px;
+				}
+				
+				@include media('<=xxs') {
+					font-size: 14px;
+					margin: 0 6px;
+				}
 			}
 		}
 		
 		&_prev {
 			margin-right: auto;
 			padding: 5px 18px 5px 5px;
+			
+			@include media('<=md') {
+				padding: 5px;
+			}
 			
 			&::before {
 				display: block;
@@ -64,13 +78,15 @@
 				width: 9px;
 				background: url('#{$images-path}icons-sprite.svg#icon-arr-left-view-black') center / contain no-repeat transparent;
 				margin: 0 12px 0 24px;
-			}
-			
-			@include media('<=xs') {
-				padding: 5px;
 				
-				&::before {
+				@include media('<=md') {
 					margin: 0 12px;
+				}
+				
+				@include media('<=xxs') {
+					height: 12px;
+					width: 7px;
+					margin: 0 5px;
 				}
 			}
 		}
@@ -79,6 +95,10 @@
 			margin-left: auto;
 			padding: 5px 5px 5px 18px;
 			
+			@include media('<=md') {
+				padding: 5px;
+			}
+				
 			&::after {
 				display: block;
 				content: '';
@@ -86,13 +106,15 @@
 				width: 9px;
 				background: url('#{$images-path}icons-sprite.svg#icon-arr-right-view-black') center / contain no-repeat transparent;
 				margin: 0 24px 0 12px;
-			}
-			
-			@include media('<=xs') {
-				padding: 5px;
 				
-				&::after {
+				@include media('<=md') {
 					margin: 0 12px;
+				}
+				
+				@include media('<=xxs') {
+					height: 12px;
+					width: 7px;
+					margin: 0 5px;
 				}
 			}
 		}

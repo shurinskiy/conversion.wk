@@ -5,7 +5,18 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	text-align: center;
+	background-color: #{$color};
+	border-radius: 10px;
+	min-height: 44px;
+	color: #fff;
 	padding: 7px;
+	
+	@include media('<=xxs') {
+		font-size: 15px;
+		min-height: 40px;
+	}
+
 
 	&::after {
 		display: none;
@@ -23,12 +34,17 @@
 		box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.25);
 		height: 70px;
 		width: 100%;
-		max-width: 270px;
+		max-width: 430px;
 		font-family: "MM", sans-serif;
 		font-size: 18px;
-		border: 2px solid rgba(255, 255, 255, 0.3);
+		border: 2px solid rgba(255, 255, 255, 0.2);
+		
+		@include media('<=xxs') {
+			font-size: 16px;
+		}
 
 		&::after {
+			display: block;
 			width: 8px;
 			height: 15px;
 			background: url('#{$images-path}icons-sprite.svg#icon-arr-right-view-white') center / contain no-repeat transparent;
@@ -36,6 +52,10 @@
 			right: 28px;
 			top: 50%;
 			transform: translateY(-50%);
+		
+			@include media('<=xxs') {
+				display: none;
+			}
 		}
 	}
 	
@@ -47,7 +67,7 @@
 		border: 1px solid rgba(255, 255, 255, 0.3);
 		font-family: "M", sans-serif;
 		font-size: 9px;
-		height: 30px;
+		min-height: 30px;
 		width: 100%;
 		max-width: 90px;
 		display: flex;
@@ -65,8 +85,8 @@
 
 	&_outlined {
 		border-radius: 10px;
+		background-color: transparent;
 		border: 1px solid #{$color};
 		color: #{$color};
-		min-height: 44px;
 	}
 }

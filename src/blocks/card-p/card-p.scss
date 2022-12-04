@@ -2,13 +2,48 @@
 	$self: &;
 	box-sizing: border-box;
 	display: flex;
-	padding: 28px 30px 30px;
-	background-color: #ECEFF6;
+	padding: 40px 30px;
 	border-radius: 10px;
+	background-color: #fff;
 	
 	@include media('<=md') {
 		padding: 30px 20px;
 		flex-flow: column nowrap;
+	}
+	
+	@include media('<=xxxs') {
+		padding: 30px 15px;
+	}
+	
+	&_grey {
+		background-color: #ECEFF6;
+	}
+
+	&_advised {
+		position: relative;
+		background: radial-gradient(167% 167% at 50% 50%, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(272deg, #FF6A9D 16%, rgba(89, 255, 195, 0.5) 100%);
+		border: 1px solid #{$color};
+	}
+
+	&__badge {
+		width: 100%;
+		max-width: 245px;
+		position: absolute;
+		box-sizing: border-box;
+		font-family: "MEB", sans-serif;
+		background-color: #{$color};
+		transform: translateY(-33%);
+		border-radius: 10px;
+		text-align: center;
+		padding: 4px 10px;
+		font-size: 14px;
+		color: #fff;
+		left: -1px;
+		top: 0;
+		
+		@include media('<=xxs') {
+			font-size: 13px;
+		}
 	}
 
 	&__brand {
@@ -21,6 +56,15 @@
 		@include media('<=md') {
 			margin: 0 auto 40px;
 		}
+
+		@include media('<=xs') {
+			margin: 0 auto 30px;
+		}
+
+		img {
+			display: block;
+			margin: 0 auto;
+		}
 	}
 
 	&__info {
@@ -31,32 +75,27 @@
 		}
 	}
 
-	&__top {
-		display: flex;
-		align-items: center;
-		margin-bottom: 5px;
-
-		@include media('<=md') {
-			margin-bottom: 10px;
-		}
-	}
-
 	&__title {
 		font-family: "MB", sans-serif;
-		margin-right: 10px;
+		line-height: 1.5;
 	}
 	
 	&__tags {
 		display: flex;
 		flex-wrap: wrap;
+
+		@include media('<=md') {
+			margin-bottom: 20px;
+		}
 	}
 	
 	&__tag {
-		margin: 3px 10px 3px 0;		
+		margin: 3px 10px 3px 0;
 	}
 
 	&__text {
 		line-height: 1.5;
+		margin-bottom: 10px;
 
 		@include media('<=md') {
 			margin-bottom: 20px;

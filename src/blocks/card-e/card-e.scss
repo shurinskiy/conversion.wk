@@ -11,8 +11,17 @@
 		align-items: center;
 		margin-bottom: 20px;
 
+		@include media('<=xxxs') {
+			display: block;
+		}
+
 		img {
+			display: block;
 			margin-right: 10px;
+
+			@include media('<=xxxs') {
+				margin: 0 auto 20px;
+			}
 		}
 		
 		span {
@@ -27,6 +36,10 @@
 		grid-template-columns: repeat(3, 1fr);
 		grid-gap: 20px;
 		align-items: center;
+		
+		@include media('<=xxs') {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	&__point {

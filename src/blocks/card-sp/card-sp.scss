@@ -1,0 +1,72 @@
+.card-sp {
+	$self: &;
+	display: flex;
+	position: relative;
+	align-items: center;
+	border: 1px solid #C0C0C0;
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 25px;
+	
+	@include media('<=md') {
+		flex-flow: column nowrap;
+		padding: 30px 25px;
+	}
+
+	&__badge {
+		width: 100%;
+		max-width: 245px;
+		position: absolute;
+		box-sizing: border-box;
+		font-family: "MB", sans-serif;
+		background-color: #949494;
+		transform: translateY(-33%);
+		border-radius: 10px;
+		text-align: center;
+		padding: 4px 10px;
+		font-size: 14px;
+		color: #fff;
+		left: -1px;
+		top: 0;
+		
+		@include media('<=xxs') {
+			font-size: 13px;
+		}
+	}
+
+	&__brand {
+		display: block;
+		min-width: 115px;
+		margin-right: 25px;
+	
+		@include media('<=md') {
+			margin: 0 0 20px;
+		}
+	}
+	
+	&__title {
+		font-family: "MEB", sans-serif;
+		margin-right: 40px;
+		font-size: 24px;
+	
+		@include media('<=md') {
+			margin: 0 0 20px;
+		}
+	}
+	
+	&__text {
+		margin-right: 20px;
+	
+		@include media('<=md') {
+			margin: 0 0 20px;
+		}
+	}
+
+	&__more {
+		flex-shrink: 0;
+		
+		@include media('<=md') {
+			margin-top: auto;
+		}
+	}
+}

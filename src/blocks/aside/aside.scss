@@ -1,0 +1,24 @@
+.aside {
+	$self: &;
+
+	&__sticky {
+
+	}
+
+	&__banner {
+		display: block;
+		overflow: hidden;
+		border-radius: 10px;
+
+		img {
+			display: block;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__title {
+		font-family: "MSB", sans-serif;
+		font-size: 21px;
+	}
+}

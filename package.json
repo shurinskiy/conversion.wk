@@ -71,6 +71,6 @@
 		"from": "src/**/*.html",
 		"to": "src/blocks",
 		"js": "src/js/blocks.js",
-		"omit": "@@,js-,active,swiper,opened,switched"
+		"omit": "@@,active,swiper,opened,switched,mb-,mt-,mbt-,pb-,pt-,pbt-"
 	}
 }
