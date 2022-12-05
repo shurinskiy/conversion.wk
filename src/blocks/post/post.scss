@@ -1,6 +1,7 @@
 .post {
 	$self: &;
 	margin-bottom: 40px;
+	font-family: "M", sans-serif;
 
 	@include media('<=sm') {
 		font-size: 15px;
@@ -20,10 +21,61 @@
 		margin-bottom: 25px;
 	}
 
-	p {
-		margin-bottom: 25px;
-		line-height: 1.5;
+	&__banner {
+
 	}
+
+	&__image {
+		margin: 0;
+
+		img {
+			display: block;
+			border-radius: 10px;
+			margin: 0 auto;
+		}
+	}
+
+	&__list {
+		line-height: 1.5;
+
+		li {
+			display: block;
+			margin: 15px 0;
+			padding-left: 15px;
+			position: relative;
+
+			&::before {
+				position: absolute;
+				left: 0;
+				top: 8px;
+				display: block;
+				content: '';
+				width: 6px;
+				height: 6px;
+				background-color: #{$color};
+				border-radius: 50%;
+				margin-right: 5px;
+			}
+		}
+	}
+
+	&__note {
+		padding: 15px 15px 15px 25px;
+		box-sizing: border-box;
+		background-color: #ECEFF6;
+		border-radius: 0 10px 10px 0;
+		border-left: 6px solid #{$color};
+	}
+	
+	&__tags {
+
+		a {
+			display: inline-block;
+			margin: 0 4px 4px;
+		}
+	}
+
+	p { line-height: 1.5; }
 
 	a {
 		color: #{$color};

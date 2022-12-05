@@ -9,6 +9,10 @@
 		display: grid;
 		grid-template-columns: 1fr 275px;
 		grid-gap: 20px;
+
+		@include media('<=sm') {
+			display: block;
+		}
 	}
 
 	&__main {
