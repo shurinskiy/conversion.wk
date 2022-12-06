@@ -8,13 +8,25 @@
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-gap: 20px;
-		
-		@include media('<=sm') {
-			grid-template-columns: repeat(2, 1fr);
-		}
-		
-		@include media('<=xxs') {
-			grid-template-columns: 1fr;
+
+		&_cards {
+			@include media('<=sm') {
+				grid-template-columns: repeat(2, 1fr);
+			}
+			
+			@include media('<=xxs') {
+				grid-template-columns: 1fr;
+			}
+
+			#{$self}__title {
+				@include media('<=sm') {
+					grid-column: span 2;
+				}
+				
+				@include media('<=xxs') {
+					grid-column: span 1;
+				}
+			}
 		}
 	}
 
@@ -40,13 +52,5 @@
 		font-family: "MSB", sans-serif;
 		font-size: 21px;
 		grid-column: span 1;
-		
-		@include media('<=sm') {
-			grid-column: span 2;
-		}
-		
-		@include media('<=xxs') {
-			grid-column: span 1;
-		}
 	}
 }
