@@ -62,11 +62,11 @@
 			position: fixed;
 			height: 100vh;
 			height: calc(var(--vh, 1vh) * 100);
-			z-index: 11;
+			z-index: 12;
 			left: -500px; top: 0;
 			max-width: 500px;
 			width: 100%;
-			padding: 40px 20px 50px;
+			padding: 40px 20px 20px;
 			margin: 0;
 			background-color: #fff;		
 			box-shadow: 5px 0 20px rgb(0 0 0 / 10%);
@@ -83,7 +83,7 @@
 		}
 	}
 
-	&__menu-close {
+	&__close {
 		@extend %reset-button;
 		display: none;
 		
@@ -233,21 +233,18 @@
 		&_mobile {
 			display: none;
 			box-sizing: border-box;
-			position: absolute;
-			bottom: 20px;
-			left: 50%;
-			transform: translateX(-50%);
 			font-size: 13px;
-			width: calc(100% - 40px);
+			margin: auto 0 0;
+			width: 100%;
+			order: 1;
 			
 			@include media('<=xxs') {
 				display: block;
-				margin: 0;
 			}
 		}
 	}
 
-	&__menu-toggle {
+	&__toggle {
 		@extend %reset-button;
 		display: none;
 		flex-shrink: 0;

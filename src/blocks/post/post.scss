@@ -1,7 +1,7 @@
 .post {
 	$self: &;
-	margin-bottom: 40px;
 	font-family: "M", sans-serif;
+
 
 	@include media('<=sm') {
 		font-size: 15px;
@@ -25,6 +25,12 @@
 
 	}
 
+	&__pic {
+		display: block;
+		overflow: hidden;
+		border-radius: 10px;
+	}
+
 	&__image {
 		margin: 0;
 
@@ -36,7 +42,6 @@
 	}
 
 	&__list {
-		line-height: 1.5;
 
 		li {
 			display: block;
@@ -75,14 +80,52 @@
 		}
 	}
 
-	p { line-height: 1.5; }
+	&__block {
+		padding: 20px;
+		background-color: #ECEFF6;
+		border-radius: 10px;
 
-	a {
-		color: #{$color};
-		text-decoration: none;
+		&_pay {
+			display: flex;
+			flex-wrap: wrap;
+			min-height: 140px;
+			align-items: center;
+			box-sizing: border-box;
+			justify-content: center;
 
-		&:hover {
-			text-decoration: underline;
+			a {
+				display: flex;
+				align-items: center;
+				margin: 20px 20px 20px 0;
+				color: #000 !important;
+				
+				&:not(:last-child) {
+					margin-right: 25px;
+				}
+
+				img {
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+
+	&__button {
+		color: #fff;
+		width: 100%;
+		max-width: 170px;
+	}
+
+	ul, p { 
+		line-height: 1.5; 
+	
+		a {
+			color: #{$color};
+			text-decoration: none;
+	
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 }

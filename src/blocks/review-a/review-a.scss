@@ -1,0 +1,42 @@
+.review-a {
+	$self: &;
+	line-height: 1.45;
+
+	&__text {
+
+	}
+
+	&__bottom {
+		display: flex;
+		align-items: center;
+		font-size: 12px;
+	}
+
+	&__avt {
+		width: 20px;
+		height: 20px;
+		flex-shrink: 0;
+		overflow: hidden;
+		border-radius: 50%;
+		background-color: #BABABA;
+		margin-right: 8px;
+	}
+
+	&__nicname {
+		color: #000;
+		text-decoration: none;
+		margin-right: 5px;
+	}
+	
+	&__status {
+		margin-right: 5px;
+
+		&_success {
+			color: #25F313;
+		}
+	}
+
+	&__group {
+
+	}
+}

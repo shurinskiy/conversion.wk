@@ -1,0 +1,38 @@
+.benefit {
+	$self: &;
+
+	&__item {
+		display: flex;
+		align-items: center;
+		margin: 25px 0;
+
+		&::before {
+			display: block;
+			content: '';
+			width: 40px;
+			height: 40px;
+			flex-shrink: 0;
+			margin-right: 15px;
+			background-repeat: no-repeat;
+			background-color: transparent;
+			background-position: center;
+			background-size: contain;
+		}
+
+		&_user::before {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-user-view-purple');
+		}
+		
+		&_note::before {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-notepad-view-purple');
+		}
+		
+		&_gear::before {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-gear-view-purple');
+		}
+		
+		&_call::before {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-headphone-view-purple');
+		}
+	}
+}

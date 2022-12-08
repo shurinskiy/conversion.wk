@@ -1,0 +1,34 @@
+.rating-a {
+	$self: &;
+	display: grid;
+	grid-gap: 16px;
+	counter-reset: rating_ctr;
+
+	&__item {
+		box-sizing: border-box;
+		text-decoration: none;
+		border-radius: 10px;
+		font-size: 14px;
+		background: linear-gradient(180deg, #{$color} 0%, rgba(0, 0, 0, 0.9) 190%);
+		padding: 14px 16px;
+		display: flex;
+
+		&::before {
+			display: block;
+			counter-increment: rating_ctr;
+			content: counter(rating_ctr);
+			color: #B6B6B6;
+			min-width: 30px;
+		}
+}
+	
+	&__name {
+		font-family: "MSB", sans-serif;
+		color: #fff;
+		margin-right: auto;
+	}
+
+	&__rate {
+		color: #B6B6B6;
+	}
+}

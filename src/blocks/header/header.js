@@ -3,7 +3,7 @@ import { menuToggle } from "../../js/lib";
 
 (() => {
 
-	const toggles = document.querySelectorAll('.header__menu-close, .header__menu-toggle');
+	const toggles = document.querySelectorAll('.header__close, .header__toggle');
 	const search_toggle = document.querySelector('.header__search-toggle');
 	const top_menu = document.querySelector('.header__menu');
 	const vh = window.innerHeight * 0.01;
@@ -17,7 +17,7 @@ import { menuToggle } from "../../js/lib";
 	
 	document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-	document.addEventListener('resize', () => {
+	window.addEventListener('resize', () => {
 		let vh = window.innerHeight * 0.01;
 		document.documentElement.style.setProperty('--vh', `${vh}px`);
 	});

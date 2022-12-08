@@ -4,12 +4,12 @@ import { throttle } from "../../js/lib";
 
 (() => {
 
-	const tags = document.querySelector('.tags');
+	const tags = document.querySelector('.hashtags');
 
 	if(tags) {
-		const inner = tags.querySelector('.tags__inner');
-		const items = tags.querySelectorAll('.tags__item');
-		const button = tags.querySelector('button.tags__more');
+		const inner = tags.querySelector('.hashtags__inner');
+		const items = tags.querySelectorAll('.hashtags__item');
+		const button = tags.querySelector('button.hashtags__more');
 		let swiper;
 
 		button.addEventListener('click', function() {
@@ -34,10 +34,10 @@ import { throttle } from "../../js/lib";
 			match: () => {
 				swiper = new Swiper(tags, {
 					modules: [Mousewheel, FreeMode],
-					freeMode: true,
+					slidesPerView: 'auto',
 					mousewheel: true,
 					spaceBetween: 15,
-					slidesPerView: 'auto'
+					freeMode: true
 				});
 				window.removeEventListener("resize", setCount);
 			},

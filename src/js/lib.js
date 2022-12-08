@@ -209,11 +209,11 @@ menuToggle(menu, toggles,  {
 * 
 */
 
-export const menuToggle = (menu, toggles, options = {}) => {
+export const menuToggle = (menu, toggles, props = {}) => {
 	if(!toggles || !menu) return;
 	
-	const { scrollLock } = options;
-	const cls = options.cls || 'opened';
+	const { scrollLock } = props;
+	const cls = props.cls || 'opened';
 	
 	const menuOpen = (e) => {
 		e.preventDefault();
@@ -224,6 +224,9 @@ export const menuToggle = (menu, toggles, options = {}) => {
 			Object.assign(menu.style, { maxWidth: parseInt(getComputedStyle(menu).maxWidth) + scrollLock.getPageScrollBarWidth() + 'px' });
 			scrollLock.disablePageScroll();
 		}
+
+		if (typeof props.open === 'function') 
+			return props.open.call(menu);
 	}
 	
 	const menuClose = (e) => {
@@ -235,21 +238,24 @@ export const menuToggle = (menu, toggles, options = {}) => {
 			scrollLock.clearQueueScrollLocks();
 			scrollLock.enablePageScroll();
 		}
+
+		if (typeof props.close === 'function') 
+			return props.close.call(menu);
 	}
 
-	['click','touchstart'].forEach(event => {
-		toggles.forEach(toggle => {
-			toggle.addEventListener(event, function(e) {
-				menu.classList.contains(`${cls}`) ? menuClose(e) : menuOpen(e);
-			});
+	toggles.forEach(toggle => {
+		toggle.addEventListener('click', function(e) {
+			menu.classList.contains(`${cls}`) ? menuClose(e) : menuOpen(e);
 		});
-		
+	});
+
+	['click','touchend'].forEach(event => {
 		document.addEventListener(event, (e) => {
 			if(menu.classList.contains(`${cls}`) && !e.target.closest(`.${menu.className.split(' ')[0]}`)) {
 				e.preventDefault();
 				menuClose(e);
 			}
-		});
+		}, true);
 	});
 }
 
@@ -876,10 +882,10 @@ makeModalFrame({ el: '.some-el', cls: 'modal', scrollLock}, function() {
 });
 */
 
-export const makeModalFrame = function(options = {}, cb) {
-	const { scrollLock } = options;
-	const cls = options.cls || 'modal';
-	const select = options.el || `[data-${cls}]`;
+export const makeModalFrame = function(props = {}) {
+	const { scrollLock } = props;
+	const cls = props.cls || 'modal';
+	const select = props.el || `[data-${cls}]`;
 
 	const modal = document.querySelector(`#${cls}__underlay`);
 	const body = modal.querySelector(`.${cls}__content`);
@@ -891,12 +897,15 @@ export const makeModalFrame = function(options = {}, cb) {
 				scrollLock.clearQueueScrollLocks();
 				scrollLock.enablePageScroll();
 			}
-
+			
 			modal.className = `${cls}`;
 			modal.style.display = "none";
-
+			
 			body.className = `${cls}__content`;
 			body.innerHTML = '';
+
+			if (typeof props.close === 'function') 
+				return props.close.call(body);
 		}
 		
 		const open = function(el) {
@@ -914,8 +923,8 @@ export const makeModalFrame = function(options = {}, cb) {
 			if(typeof scrollLock !== 'undefined')
 				scrollLock.disablePageScroll();
 
-			if (typeof cb === 'function') 
-				return cb.call(body, el);
+			if (typeof props.open === 'function') 
+				return props.open.call(body, el);
 		}
 
 		if(this) {
@@ -924,7 +933,7 @@ export const makeModalFrame = function(options = {}, cb) {
 		} else {
 			document.addEventListener('click', (e) => {
 				let el = e.target.closest(select);
-	
+				
 				if (el && el.dataset[`${cls}`]) {
 					e.preventDefault();
 					open(el);

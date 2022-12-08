@@ -1,6 +1,43 @@
 .aside {
 	$self: &;
+	box-sizing: border-box;
 	position: relative;
+
+	&_blind {
+		@include media('<=sm') {
+			position: fixed;
+			height: 100vh;
+			height: calc(var(--vh, 1vh) * 100);
+			z-index: 10;
+			right: -300px; top: 0;
+			max-width: 300px;
+			width: 100%;
+			padding: 60px 0 20px;
+			margin: 0;
+			background-color: #fff;		
+			box-shadow: 5px 0 20px rgba(0, 0, 0, 0.1);
+			transition: right 0.3s ease-out;
+			
+			#{$self}__toggle {
+				display: block;
+			}
+			
+			#{$self}__close {
+				display: block;
+			}
+
+			#{$self}__sticky {
+				position: static;
+				overflow: auto;
+				max-height: 100%;
+				padding: 0 20px;
+			}
+			
+			&.opened {
+				right: 0;
+			}
+		}
+	}
 
 	&__sticky {
 		position: sticky;
@@ -52,5 +89,51 @@
 		font-family: "MSB", sans-serif;
 		font-size: 21px;
 		grid-column: span 1;
+	}
+	
+	&__subtitle {
+		font-family: "MSB", sans-serif;
+		margin-bottom: 5px;
+	}
+	
+	&__hashtag {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	&__block {
+		padding: 20px 16px;
+		background-color: #ECEFF6;
+		border-radius: 10px;
+	}
+
+	&__button {
+		
+	}
+
+	&__close {
+		@extend %reset-button;
+		display: none;
+		position: absolute;
+		top: 15px;
+		left: 15px;
+		width: 34px;
+		height: 34px;
+		background: url('#{$images-path}icons-sprite.svg#icon-menu-close-view-black') center / 25px 25px no-repeat transparent;
+	}
+
+	&__toggle {
+		@extend %reset-button;
+		display: none;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		z-index: 2;
+		transform: translate(-100%, -50%);
+		width: 40px;
+		height: 50px;
+		box-shadow: -7px 0px 7px rgba(0, 0, 0, 0.1);
+		border-radius: 100px 0 0 100px;
+		background: url('#{$images-path}icons-sprite.svg#icon-side-view-grey') 60% center / 6px 24px no-repeat #fff;
 	}
 }

@@ -8,9 +8,9 @@
 	text-align: center;
 	background-color: #{$color};
 	border-radius: 10px;
-	min-height: 44px;
+	min-height: 48px;
 	color: #fff;
-	padding: 7px;
+	padding: 7px 10px;
 	
 	@include media('<=xxs') {
 		font-size: 15px;

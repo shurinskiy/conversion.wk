@@ -1,0 +1,175 @@
+.card-pt {
+	$self: &;
+	padding: 25px 25px 25px 45px;
+	background-color: #ECEFF6;
+	border-radius: 10px;
+	position: relative;
+	overflow: hidden;
+	
+	@include media('<=sm') {
+		padding: 25px;
+	}
+
+	&_advised {
+		background: linear-gradient(180deg, #ADEDD6 0%, #EF79A1 100%);
+
+		#{$self}__advise {
+			display: block;
+		}
+
+		#{$self}__image {
+			border: 2px solid #{$color};
+			transform: translateY(30px);
+		}
+
+		#{$self}__button {
+			font-family: "MSB", sans-serif;
+			background-color: #fff;
+			color: #000;
+		}
+
+		#{$self}__tags a {
+			color: #{$color};
+		}
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+
+		@include media('<=xs') {
+			flex-flow: column nowrap;
+		}
+	}
+
+	&__image {
+		margin: 40px 40px 0 0;
+		border-radius: 50%;
+		overflow: hidden;
+		flex-shrink: 0;
+		height: 157px;
+		width: 157px;
+		
+		@include media('<=sm') {
+			margin: 40px 20px 0 0;
+		}
+		
+		@include media('<=xs') {
+			margin: 0 0 30px 0;
+		}
+
+		img {
+			object-fit: cover;
+			display: block;
+			height: 100%;
+			width: 100%;
+		}
+	}
+
+	&__content {
+
+	}
+
+	&__head {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__title {
+		font-family: "MSB", sans-serif;
+		margin-right: 20px;
+		font-size: 32px;
+		padding: 10px 0;
+		
+		@include media('<=xxs') {
+			font-size: 28px;
+		}
+	}
+
+	&__range {
+
+	}
+	
+	&__rating {
+		display: flex;
+		margin-bottom: 2px;
+	
+		span {
+			margin-right: 10px;
+		}
+	}
+
+	&__reviews {
+		display: flex;
+		align-items: center;
+		text-transform: uppercase;
+
+		span {
+			margin-right: 5px;
+		}
+
+		&::after {
+			display: block;
+			content: '';
+			width: 16px;
+			height: 16px;
+			background: url('#{$images-path}icons-sprite.svg#icon-msg-view-purple') center / contain no-repeat transparent;
+			margin-left: 7px;
+		}
+	}
+
+	&__text {
+		font-family: "M", sans-serif;
+		line-height: 1.5;
+
+		@include media('<=xxs') {
+			font-size: 15px;
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	
+	&__tags {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 10px 0;
+		margin-right: auto;
+
+		a {
+			margin: 5px 10px 5px 0;
+			padding: 4px 8px;
+			font-size: 16px;
+		}
+	}
+	
+	&__button {
+		width: 100%;
+		max-width: 170px;
+	}
+
+	&__advise {
+		display: none;
+		position: absolute;
+		left: 0;
+		top: 20px;
+		transform: translate(-30%, 0) rotate(-30deg);
+		background-color: #{$color};
+		font-family: "MEB", sans-serif;
+		text-align: center;
+		font-size: 14px;
+		padding: 10px 0;
+		color: #fff;
+		width: 400px;
+		
+		@include media('<=xxs') {
+			font-size: 13px;
+			transform: translate(-34%, 0) rotate(-27deg);
+		}
+	}
+}
