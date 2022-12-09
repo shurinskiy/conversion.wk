@@ -85,6 +85,14 @@
 		background-color: #ECEFF6;
 		border-radius: 10px;
 
+		&_indent {
+			padding-left: 50px;
+			
+			@include media('<=xxs') {
+				padding-left: 20px;
+			}
+		}
+
 		&_pay {
 			display: flex;
 			flex-wrap: wrap;
