@@ -110,6 +110,15 @@
 		}
 	}
 
+	&__code {
+		width: 170px;
+		margin-right: 20px;
+	}
+
+	&__buttons {
+		display: flex;
+	}
+
 	&__button {
 		color: #fff;
 		width: 100%;

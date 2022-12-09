@@ -2,13 +2,14 @@
 	$self: &;
 	box-sizing: border-box;
 	background-color: #F7F8FC;
-	padding: 20px 18px 40px;
+	padding: 18px 18px 40px;
 	display: flex;
 	flex-flow: column nowrap;
 	font-size: 14px;
 
 	&__row {
 		display: flex;
+		margin: 7px 0;
 	}
 
 	&__point {
@@ -18,6 +19,43 @@
 
 	&__check {
 
+		input[type='radio'] {
+			@extend %reset-input;
+			cursor: pointer;
+			height: 20px;
+			width: 20px;
+			background-color: transparent;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+			filter: grayscale(100%);
+
+			&:nth-child(1) {
+				background-image: url('#{$images-path}ic-like.svg');
+				margin-right: 10px;
+			}
+
+			&:nth-child(2) {
+				background-image: url('#{$images-path}ic-dislike.svg');
+				filter: grayscale(100%) brightness(170%);
+			}
+
+			&:checked {
+				filter: none;
+			}
+		}
+
+		&_top {
+			input[type='radio'] {
+				&:nth-child(1) {
+					background-image: url('#{$images-path}ic-okay.svg');
+				}
+
+				&:nth-child(2) {
+					background-image: url('#{$images-path}ic-notokay.svg');
+				}
+			}
+		}
 	}
 
 	&__total {
