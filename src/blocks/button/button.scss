@@ -11,6 +11,8 @@
 	min-height: 48px;
 	color: #fff;
 	padding: 7px 10px;
+	font-family: "MM", sans-serif;
+	font-size: 16px;
 	
 	@include media('<=xxs') {
 		font-size: 15px;
@@ -35,7 +37,6 @@
 		height: 70px;
 		width: 100%;
 		max-width: 430px;
-		font-family: "MM", sans-serif;
 		font-size: 18px;
 		border: 2px solid rgba(255, 255, 255, 0.2);
 		

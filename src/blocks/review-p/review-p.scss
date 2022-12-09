@@ -1,0 +1,36 @@
+.review-p {
+	$self: &;
+
+	&__text {
+
+	}
+
+	&__panel {
+		display: flex;
+	}
+
+	&__editor {
+		min-height: 300px;
+		border-radius: 20px;
+		border: 1px solid #5f5f5f;
+		flex-grow: 1;
+	}
+	
+	&__resume {
+		min-height: 300px;
+		border-radius: 20px;
+		border: 1px solid #5f5f5f;
+		margin-left: 80px;
+		max-width: 285px;
+		flex-grow: 1;
+	}
+
+	&__agree {
+		display: block;
+	}
+
+	&__button {
+		width: 100%;
+		max-width: 170px;
+	}
+}

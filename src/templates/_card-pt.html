@@ -28,6 +28,13 @@
 			<a class="tag tag_large tag_white" href="./">#игры</a>
 			<a class="tag tag_large tag_white" href="./">#дейтинг</a>
 		</div>
-		<a class="card-pt__button button" href="./">Начать работу</a>
+		<div class="card-pt__buttons">
+			@@if(this.promo){
+				<div class="card-pt__code code" data-cover="10">
+					<pre data-modal="promocode" data-url="http://google.com">@@promo</pre>
+				</div>
+			}
+			<a class="card-pt__button button" href="./">Начать работу</a>
+		</div>
 	</div>
 </div>

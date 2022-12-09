@@ -240,7 +240,7 @@ export const menuToggle = (menu, toggles, props = {}) => {
 		}
 
 		if (typeof props.close === 'function') 
-			return props.close.call(menu);
+			return props.close.call(menu, this);
 	}
 
 	toggles.forEach(toggle => {
