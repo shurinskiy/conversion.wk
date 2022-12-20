@@ -1,0 +1,54 @@
+.p-vacancy {
+	$self: &;
+	display: flex;
+	justify-content: space-between;
+
+	&__base {
+		margin-right: 30px;
+		flex-grow: 1;
+	}
+
+	&__title {
+
+	}
+
+	&__info {
+		display: flex;
+	}
+
+	&__place {
+		text-decoration: none;
+		color: #{$color};
+		margin-right: 20px;
+	}
+	
+	&__date {
+		margin-left: auto;
+	}
+	
+	&__price {
+		// color: #{$color};
+		display: inline-flex;
+		align-items: center;
+		margin-right: 20px;
+		
+		&::before {
+			display: block;
+			content: '$';
+			height: 16px;
+			width: 16px;
+			color: #{$color};
+			border: 1px solid #{$color};
+			border-radius: 50%;
+			margin: 0 5px 0 0;
+			font-family: "M", sans-serif;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	&__side {
+		min-width: 230px;
+	}
+}

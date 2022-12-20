@@ -4,7 +4,8 @@
 	position: relative;
 	height: 48px;
 	border-radius: 6px;
-	outline: 1px dashed #ACB0BD;
+	outline: 1px dashed #{$color};
+	// outline: 1px dashed #ACB0BD;
 	// background-color: #fff;
 	outline-offset: -1px;
 	overflow: hidden;

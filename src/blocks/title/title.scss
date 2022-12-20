@@ -3,6 +3,7 @@
 	color: #000;
 	font-family: "MB", sans-serif;
 	font-size: 32px;
+	line-height: 1.1;
 
 	@include media('<=sm') {
 		font-size: 28px;

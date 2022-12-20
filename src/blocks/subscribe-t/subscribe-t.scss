@@ -2,9 +2,10 @@
 	$self: &;
 	box-sizing: border-box;
 	display: block;
-	background: linear-gradient(180deg, #{$color} 0%, rgba(0, 0, 0, 0.9) 190%);
+	// background: linear-gradient(180deg, #{$color} 0%, rgba(0, 0, 0, 0.9) 190%);
+	background-color: #{$color};
 	border-radius: 8px;
-	padding: 10px 10px 10px 60px;
+	padding: 15px 10px 15px 60px;
 	text-decoration: none;
 	color: #fff;
 	font-family: "MSB", sans-serif;
@@ -16,11 +17,11 @@
 		box-sizing: border-box;
 		display: block;
 		content: '';
-		height: 24px;
-		width: 24px;
+		height: 28px;
+		width: 28px;
 		border-radius: 50%;
 		border: 2px solid #fff;
-		background: url('#{$images-path}icons-sprite.svg#icon-tgm-view-white') center / 10px 8px no-repeat, linear-gradient(180deg, #5AB0E9 0%, #3888C4 100%);
+		background: url('#{$images-path}icons-sprite.svg#icon-tgm-view-white') center / 14px 12px no-repeat, linear-gradient(180deg, #5AB0E9 0%, #3888C4 100%);
 		position: absolute;
 		left: 20px;
 		top: 50%;
@@ -30,7 +31,7 @@
 	span {
 		display: block;
 
-		&:last-child {
+		&:nth-child(2) {
 			font-family: "M", sans-serif;
 			font-size: 10px;
 		}

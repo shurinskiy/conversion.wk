@@ -1,0 +1,63 @@
+@@include("_head.html") 
+@@include("_header.html") 
+
+<section class="top">
+	<div class="top__container container">
+		<div class="top__head">
+			<div class="top__breadcrumbs">
+				<a href="./">Главная</a>
+				<span>Вакансии</span>
+			</div>
+			<a class="top__side subscribe-t" href="./">
+				<span>Подписаться в telegram</span>
+				<!-- <span>Для быстрой инфы</span> -->
+			</a>
+		</div>
+		<a class="top__banner banner-t mb-2" href="./">
+			<img src="./images/banner-image-1.png" alt="">
+		</a>
+	</div>
+</section>
+
+<section class="section pbt-5">
+	<div class="section__container container">
+		<h2 class="section__title title mb-5">Вакансии</h2>
+		<div class="section__items section__items_triple mb-5">
+			@@include("_card-v.html", {
+				"cls":"section__item"
+			})
+
+			@@include("_card-v.html", {
+				"cls":"section__item"
+			})
+
+			@@include("_card-v.html", {
+				"cls":"section__item"
+			})
+			@@include("_card-v.html", {
+				"cls":"section__item"
+			})
+
+			@@include("_card-v.html", {
+				"cls":"section__item"
+			})
+
+			@@include("_card-v.html", {
+				"cls":"section__item"
+			})
+			@@include("_card-v.html", {
+				"cls":"section__item"
+			})
+
+			@@include("_card-v.html", {
+				"cls":"section__item"
+			})
+
+			@@include("_card-v.html", {
+				"cls":"section__item"
+			})
+		</div>
+	</div>
+</section>
+
+@@include("_bottom.html")

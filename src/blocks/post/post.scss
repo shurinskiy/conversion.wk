@@ -15,6 +15,14 @@
 
 	}
 
+	&__title {
+
+	}
+
+	&__vacancy {
+
+	}
+
 	&__subtitle {
 		font-family: "MSB", sans-serif;
 		font-size: 21px;
@@ -131,6 +139,15 @@
 		color: #fff;
 		width: 100%;
 		max-width: 170px;
+
+		&_wide {
+			max-width: 250px;
+		}
+
+		&_center {
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 
 	ul, p { 
