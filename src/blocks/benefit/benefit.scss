@@ -1,10 +1,19 @@
 .benefit {
 	$self: &;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 30px;
+	
+	@include media('<=xxs') {
+		grid-template-columns: 1fr;
+		grid-gap: 20px;
+	}
 
 	&__item {
+		grid-column: span 1;
 		display: flex;
 		align-items: center;
-		margin: 25px 0;
+		// margin: 10px 0;
 
 		&::before {
 			display: block;

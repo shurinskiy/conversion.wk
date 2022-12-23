@@ -9,9 +9,13 @@
 	font-size: 18px;
 	max-width: 280px;
 	white-space: nowrap;
-			
+	
 	@include media('<=xxxs') {
 		font-size: 15px;
+	}
+	
+	&_long {
+		max-width: 400px;
 	}
 
 	&::after {

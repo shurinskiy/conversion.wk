@@ -9,7 +9,8 @@
 		text-decoration: none;
 		border-radius: 10px;
 		font-size: 14px;
-		background: linear-gradient(180deg, #{$color} 0%, rgba(0, 0, 0, 0.9) 190%);
+		background-color: #{$color};
+		// background: linear-gradient(180deg, #{$color} 0%, rgba(0, 0, 0, 0.9) 190%);
 		padding: 14px 16px;
 		display: flex;
 

@@ -109,11 +109,18 @@
 	&__side {
 		display: flex;
 		justify-content: space-between;
+
+		@include media('<=md') {
+			justify-content: center;
+		}
 	}
 
 	&__range {
 		align-self: center;
 		margin-right: 30px;
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
 		
 		@include media('<=md') {
 			margin-right: 5px;
@@ -122,6 +129,7 @@
 	
 	&__rating {
 		display: flex;
+		margin-bottom: 10px;
 
 		> span {
 			margin-right: 5px;
@@ -130,6 +138,7 @@
 
 	&__reviews {
 		text-transform: uppercase;
+		margin-bottom: 15px;
 	}
 
 	&__more {

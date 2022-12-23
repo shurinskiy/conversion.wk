@@ -143,6 +143,10 @@
 		flex-wrap: wrap;
 		margin-right: auto;
 
+		@include media('<=sm') {
+			display: none;
+		}
+
 		a {
 			margin: 5px 10px 5px 0;
 			padding: 4px 8px;
@@ -152,8 +156,11 @@
 
 	&__buttons {
 		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
+		justify-content: center;
+		
+		@include media('<=xxxs') {
+			flex-wrap: wrap;
+		}
 	}
 	
 	&__button {
@@ -161,7 +168,11 @@
 		width: 170px;
 		
 		@include media('<=sm') {
-			margin-top: 20px;
+
+		}
+		
+		@include media('<=xxs') {
+			margin: 0 auto;
 		}
 	}
 
@@ -169,8 +180,8 @@
 		width: 170px;
 		margin-right: 20px;
 		
-		@include media('<=sm') {
-			margin-top: 20px;
+		@include media('<=xxxs') {
+			margin: 0 0 20px;
 		}
 	}
 

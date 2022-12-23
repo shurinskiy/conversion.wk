@@ -93,6 +93,21 @@
 		background-color: #ECEFF6;
 		border-radius: 10px;
 
+		&_columns {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 15px;
+			
+			@include media('<=xs') {
+				grid-template-columns: 1fr;
+			}
+
+			p {
+				grid-column: span 1;
+				margin: 0;
+			}
+		}
+
 		&_indent {
 			padding-left: 50px;
 			
@@ -104,7 +119,7 @@
 		&_pay {
 			display: flex;
 			flex-wrap: wrap;
-			min-height: 140px;
+			min-height: 100px;
 			align-items: center;
 			box-sizing: border-box;
 			justify-content: center;

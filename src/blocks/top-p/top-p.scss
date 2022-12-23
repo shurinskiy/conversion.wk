@@ -1,22 +1,69 @@
 .top-p {
 	$self: &;
-	display: flex;
-	border-left: 1px solid #{$color};
-	padding: 10px 0 10px 10px;
+	// border-left: 1px solid #{$color};
+	
+	@include media('<=xxxs') {
+		font-size: 12px;
+	}
+	
+	&__inner {
+		display: flex;
+		padding: 10px 0;
+		align-items: center;
+
+		@include media('<=xxs') {
+			display: block;
+		}
+	}
+
+	&__side {
+		display: flex;
+		align-items: center;
+	}
+
+	&__avatar {
+		height: 40px;
+		width: 40px;
+		border-radius: 50%;
+		overflow: hidden;
+		margin-right: 20px;
+		flex-shrink: 0;
+		
+		@include media('<=xxs') {
+			margin-right: 10px;
+		}
+	
+		img {
+			display: block;
+		}
+	}
 
 	&__category {
 		font-family: "MSB", sans-serif;
 		margin-right: 30px;
+		
+		@include media('<=xxs') {
+			margin-right: 10px;
+		}
 	}
 	
 	&__date {
 		margin-right: 20px;
+		text-align: right;
+
+		@include media('<=xxs') {
+			margin: 0 0 0 auto;
+		}
 	}
 	
 	&__views {
 		margin-left: auto;
 		display: flex;
 		align-items: center;
+
+		@include media('<=xxs') {
+			justify-content: flex-end;
+		}
 		
 		&::before {
 			display: block;
