@@ -25,6 +25,27 @@
 		border: 1px solid #{$color};
 	}
 
+	&_sponsor {
+		position: relative;
+		background: radial-gradient(167% 167% at 50% 50%, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(272deg, #FF6A9D 16%, rgba(89, 255, 195, 0.5) 100%);
+		border: 1px solid #ffbb00;
+
+		#{$self}__badge {
+			background-color: #ffbb00;
+		}
+
+		#{$self}__title {
+			&::after {
+				display: inline-block;
+				content: '';
+				height: 20px;
+				width: 30px;
+				background: url('#{$images-path}ic-sponsor-crown.svg') center / contain no-repeat transparent;
+				margin-left: 8px;
+			}
+		}
+	}
+
 	&__badge {
 		width: 100%;
 		max-width: 245px;

@@ -1,5 +1,6 @@
-<div class="card-p @@if(this.cls){@@cls} @@if(this.advised){card-p_advised}">
+<div class="card-p @@if(this.cls){@@cls} @@if(this.advised){card-p_advised} @@if(this.sponsor){card-p_sponsor}">
 	@@if(this.advised){<span class="card-p__badge">CONVERSION рекомендует!</span>}
+	@@if(this.sponsor){<span class="card-p__badge">Спонсор категории</span>}
 	@@if(this.img){<a class="card-p__brand" href="./partner.html"><img src="@@if(this.img){./images/@@img}" alt=""></a>}
 	<div class="card-p__info">
 		<h3 class="card-p__title">Keitaro</h3>
