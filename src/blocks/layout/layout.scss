@@ -4,11 +4,24 @@
 	&_light {
 		background-color: #F7F8FC;
 	}
+	
+	&_bottom {
+		padding-bottom: 105px;
+		margin-bottom: -105px;
+	}
 
 	&__container {
 		display: grid;
 		grid-template-columns: 1fr 275px;
 		grid-gap: 20px;
+		
+		&_reverse {
+			grid-template-columns: 275px 1fr;
+	
+			@include media('<=md') {
+				display: block;
+			}
+		}
 
 		@include media('<=sm') {
 			display: block;
@@ -17,7 +30,6 @@
 
 	&__main {
 		grid-column: span 1;
-
 	}
 
 	&__aside {

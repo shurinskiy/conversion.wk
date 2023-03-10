@@ -1,0 +1,79 @@
+.catalog {
+	$self: &;
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+
+		@include media('<=xs') {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__title {
+		margin: 0 20px 0 0;
+	}
+
+	&__sort {
+		padding: 5px 0;
+		display: flex;
+		cursor: default;
+		position: relative;
+		
+		> span {
+			margin-right: 8px;
+		}
+		
+		&::after {
+			display: block;
+			content: '';
+			width: 10px;
+			height: 14px;
+			background: url('#{$images-path}icons-sprite.svg#icon-arr-right-view-black') center / 8px 14px no-repeat transparent;
+			transform: rotate(90deg) translateX(4px);
+		}
+		
+		&:hover {
+			#{$self}__sort-ddown {
+				display: block;
+			}
+		}
+	}
+	
+	&__sort-ddown {
+		display: none;
+		box-sizing: border-box;
+		position: absolute;
+		top: calc(100% - 4px);
+		left: 0;
+		background-color: #fff;
+		padding: 5px 10px;
+		border-radius: 5px;
+		border: 1px solid #e7e7e7;
+		
+		> a {
+			text-decoration: none;
+			color: inherit;
+			display: block;
+			padding: 5px 0;
+		}
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-gap: 24px;
+
+		@include media('<=xs') {
+			display: block;
+		}
+	}
+	
+	&__item {
+		grid-column: span 6;
+
+		@include media('<=xs') {
+			margin-bottom: 24px;
+		}
+	}
+}
