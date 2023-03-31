@@ -23,6 +23,18 @@
 			}
 		}
 
+		&_rubber {
+			grid-template-columns: repeat(12, 1fr);
+
+			#{$self}__main {
+				grid-column: span 8;
+			}
+
+			#{$self}__aside {
+				grid-column: span 4;
+			}
+		}
+
 		@include media('<=sm') {
 			display: block;
 		}

@@ -2,6 +2,13 @@
 	$self: &;
 	display: flex;
 
+	&_small {
+		#{$self}__star {
+			width: 13px;
+			height: 12px;
+		}
+	}
+
 	&__star {
 		width: 17px;
 		height: 16px;

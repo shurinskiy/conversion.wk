@@ -1,0 +1,29 @@
+.post-note {
+	$self: &;
+	display: block;
+	box-sizing: border-box;
+	padding: 30px;
+	border: 1px solid #{$color};
+	border-radius: 10px;
+	line-height: 24px;
+	
+	@include media('<=xxxs') {
+		padding: 20px;
+	}
+
+	&__title {
+		font-family: "MSB", sans-serif;
+	}
+
+	&__points {
+
+	}
+
+	&__bottom {
+
+	}
+
+	&__subtitle {
+
+	}
+}

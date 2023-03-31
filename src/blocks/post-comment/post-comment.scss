@@ -1,0 +1,16 @@
+.post-comment {
+	$self: &;
+
+	&__text {
+		font-size: 14px;
+		line-height: 21px;
+	}
+
+	&__editor {
+		min-height: 300px;
+		grid-column: span 1;
+		border-radius: 20px;
+		box-sizing: border-box;
+		border: 1px solid #5f5f5f;
+	}
+}

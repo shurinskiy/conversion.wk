@@ -5,6 +5,10 @@
 	border-radius: 10px;
 	padding: 20px;
 
+	&_light {
+		background-color: #F7F8FC;
+	}
+
 	&__image {
 		display: block;
 		margin-bottom: 30px;
@@ -47,17 +51,27 @@
 		font-family: "MSB", sans-serif;
 		font-size: 18px;	
 		margin-bottom: 12px;
+
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
 	}
 	
 	&__subtitle {
 		font-family: "MSB", sans-serif;
 		font-size: 14px;
 		margin-bottom: 12px;
+		color: inherit;
+		text-decoration: none;
 	}
 	
 	&__text {
+		display: block;
 		margin-bottom: 12px;
 		font-size: 14px;
+		color: inherit;
+		text-decoration: none;
 	}
 	
 	&__info {

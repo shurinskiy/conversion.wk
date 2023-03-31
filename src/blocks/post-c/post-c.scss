@@ -1,0 +1,99 @@
+.post-c {
+	$self: &;
+	box-sizing: border-box;
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 10px;
+	line-height: 24px;
+
+	&__top {
+
+	}
+
+	&__title {
+		font-family: "MSB", sans-serif;
+		font-size: 36px;
+	}
+
+	&__subtitle {
+		font-family: "MSB", sans-serif;
+		font-size: 24px;
+	}
+
+	&__intro {
+		font-size: 20px;
+
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
+	}
+
+	&__counts {
+		color: #515151;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		max-width: 400px;
+	}
+
+	&__note {
+
+	}
+
+	&__piece {
+
+	}
+
+	&__author {
+
+	}
+
+	&__remark-iconed {
+		display: flex;
+		align-items: center;
+		max-width: 300px;
+		font-family: "MSB", sans-serif;
+		line-height: 20px;
+
+		&::before {
+			display: block;
+			content: '';
+			width: 33px;
+			height: 34px;
+			margin-right: 10px;
+			flex-shrink: 0;
+			background: url('#{$images-path}ic-guarantees.png') center / auto no-repeat transparent;
+		}
+	}
+
+	&__reviews {
+
+	}
+
+	&__comment {
+
+	}
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-gap: 20px;
+	}
+
+	&__card {
+		grid-column: span 6;
+		
+		@include media('<=md') {
+			grid-column: span 12;
+		}
+		
+		@include media('<=sm') {
+			grid-column: span 6;
+		}
+		
+		@include media('<=xs') {
+			grid-column: span 12;
+		}
+	}
+}

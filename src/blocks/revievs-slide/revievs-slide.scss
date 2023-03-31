@@ -1,0 +1,45 @@
+.revievs-slide {
+	$self: &;
+	display: block;
+	box-sizing: border-box;
+	padding: 10px 15px;
+	border: 1px solid #{$color};
+	border-radius: 10px;
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 5px;
+	}
+
+	&__title {
+		font-family: "MSB", sans-serif;
+		font-size: 14px;
+	}
+	
+	&__rating {
+
+	}
+	
+	&__text {
+		font-size: 14px;
+		line-height: 21px;
+	}
+
+	&__more {
+		color: #{$color};
+		font-size: 12px;
+		text-decoration: none;
+
+		&::before {
+			display: inline-block;
+			content: '';
+			width: 4px;
+			height: 8px;
+			background: url('#{$images-path}icons-sprite.svg#icon-arr-right-view-purple') center / contain no-repeat transparent;
+			transform: rotate(90deg);
+			margin-right: 5px;
+		}
+	}
+}

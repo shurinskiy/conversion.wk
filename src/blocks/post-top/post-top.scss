@@ -1,0 +1,40 @@
+.post-top {
+	$self: &;
+
+	&__image {
+		display: block;
+		margin-bottom: 30px;
+		
+		img {
+			display: block;
+			border-radius: 10px;
+			// max-height: 250px;
+			margin: 0 auto;
+			// height: 100%;
+			// width: 100%;
+			// object-fit: cover;
+		}
+	}
+
+	&__panel {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__tags {
+
+	}
+
+	&__tag {
+
+	}
+
+	&__rating {
+		display: flex;
+		align-items: center;
+		
+		.rating {
+			margin-right: 10px;
+		}
+	}
+}

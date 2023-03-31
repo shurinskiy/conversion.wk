@@ -1,0 +1,43 @@
+.post-author {
+	$self: &;
+	display: flex;
+
+	@include media('<=xxs') {
+		display: block;
+	}
+	
+	&__image {
+		flex-shrink: 0;
+		align-self: flex-start;
+		overflow: hidden;
+		border-radius: 50%;
+		margin-right: 35px;
+		max-width: 120px;
+
+		@include media('<=xxs') {
+			margin-bottom: 20px;
+		}
+	
+		img {
+			display: block;
+		}
+	}
+
+	&__side {
+
+	}
+
+	&__title {
+
+	}
+
+	&__subtitle {
+		display: block;
+		color: #{$color};
+		text-decoration: none;
+	}
+
+	&__text {
+
+	}
+}
