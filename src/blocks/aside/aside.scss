@@ -82,6 +82,7 @@
 	&__sticky {
 		position: sticky;
 		top: 90px;
+		bottom: 20px;
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-gap: 20px;
